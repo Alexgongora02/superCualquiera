@@ -1,11 +1,13 @@
-import './App.css';
+import React from "react";
+import store from "./store/store";
+import { Provider } from "react-redux";
+import "./App.css";
 
 function App() {
   return (
-    
-    <div className="mx-auto">
-      Supermercado SuperReact
-    </div>
+    <Provider store={store}>
+      <h1 className="mx-auto">Supermercado SuperReact</h1>
+    </Provider>
   );
 }
 
