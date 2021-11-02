@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <Provider store={store}>
-        <h1 className="mx-auto">Navbar</h1>
+        <h1 className="mx-auto bg-primary text-center p-2">Navbar</h1>
         <div className="container">
           <Switch>
             <Route exact path="/" component={Home} />
@@ -17,7 +17,7 @@ function App() {
             <Route path="/contact" render={() => <h1>Contact</h1>} />
           </Switch>
         </div>
-        <footer>
+        <footer className="mx-auto bg-primary text-center text-white mt-3 pb-1">
           <h4>Footer</h4>
         </footer>
       </Provider>

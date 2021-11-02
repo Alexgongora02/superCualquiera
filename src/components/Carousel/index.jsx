@@ -29,39 +29,30 @@ export default function Carousel() {
           aria-label="Slide 3"
         ></button>
       </div>
-      <div className="carousel-inner">
+      <div className="carousel-inner rounded">
         <div className="carousel-item active">
           <img
-            src="https://via.placeholder.com/300x100.png?text=Imagen+de+Super+Cualquiera+1"
+            src="./assets/carousel/carousel-1.webp"
             className="d-block w-100"
             alt="..."
           />
-          <div className="carousel-caption d-none d-md-block text-dark">
-            <h5>6 Cuotas sin interes con Visa</h5>
-            <p>Valido para todos los productos de almacén los dias domingo</p>
-          </div>
+          
         </div>
         <div className="carousel-item">
           <img
-            src="https://via.placeholder.com/300x100.png?text=Imagen+de+Super+Cualquiera+2"
+            src="./assets/carousel/carousel-2.webp"
             className="d-block w-100"
             alt="..."
           />
-          <div className="carousel-caption d-none d-md-block text-success">
-            <h5>¡15% de descuento!</h5>
-            <p>Para todas tus compras online durante noviembre</p>
-          </div>
+          
         </div>
         <div className="carousel-item">
           <img
-            src="https://via.placeholder.com/300x100.png?text=Imagen+de+Super+Cualquiera+3"
+            src="./assets/carousel/carousel-3.webp"
             className="d-block w-100"
             alt="..."
           />
-          <div className="carousel-caption d-none d-md-block text-primary">
-            <h5>2 x 1 en bebidas</h5>
-            <p>Los dias miercoles y jueves</p>
-          </div>
+          
         </div>
       </div>
       <button
