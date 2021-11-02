@@ -14,7 +14,7 @@ export default function ProductCard({ product }) {
         <h5 className="card-title text-capitalize">{producto}</h5>
         <p className="card-text fw-lighter" style={{ fontSize: ".9rem" }}>{desc}</p>
       </div>
-      <button className="btn btn-primary">Carrito</button>
+      <button className="btn btn-success">Carrito</button>
     </div>
   );
 }
