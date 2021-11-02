@@ -1,10 +1,11 @@
 import React from "react";
 import ProductList from "./ProductList";
+import Carousel from "./Carousel";
 
 export default function Home() {
   return (
     <div>
-      <h1>Home</h1>
+      <Carousel />
       <ProductList />
     </div>
   );
