@@ -1,0 +1,425 @@
+{
+  "productos": [
+    {
+      "producto": "leche",
+      "img": 1,
+      "desc": "Leche Manfrey descremada 1lts",
+      "categ": ["almacén", "lacteos"],
+      "precio": 85
+    },
+    {
+      "producto": "leche",
+      "img": 2,
+      "desc": "Leche Manfrey entera 1lts",
+      "categ": ["almacén", "lacteos"],
+      "precio": 85
+    },
+    {
+      "producto": "leche",
+      "img": 3,
+      "desc": "Leche Tregar entera 1lts",
+      "categ": ["almacén", "lacteos"],
+      "precio": 89
+    },
+    {
+      "producto": "leche",
+      "img": 4,
+      "desc": "Leche Tregar descremada 1lts",
+      "categ": ["almacén", "lacteos"],
+      "precio": 89
+    },
+    {
+      "producto": "leche",
+      "img": 5,
+      "desc": "Leche Tregar pequeños 1lts",
+      "categ": ["almacén", "lacteos"],
+      "precio": 95
+    },
+    {
+      "producto": "harina",
+      "img": 6,
+      "desc": "Harina Cañuelas 000 1kg",
+      "categ": ["almacén"],
+      "precio": 55
+    },
+    {
+      "producto": "harina",
+      "img": 7,
+      "desc": "Harina Blancaflor premezcla 1kg",
+      "categ": ["almacén"],
+      "precio": 99
+    },
+    {
+      "producto": "harina",
+      "img": 8,
+      "desc": "Harina Sitary integral 1kg",
+      "categ": ["almacén"],
+      "precio": 89
+    },
+    {
+      "producto": "fideos",
+      "img": 9,
+      "desc": "Fideos Arcor spaguetti 500gr",
+      "categ": ["almacén"],
+      "precio": 55
+    },
+    {
+      "producto": "fideos",
+      "img": 10,
+      "desc": "Fideos Arcor ave maria 500gr",
+      "categ": ["almacén"],
+      "precio": 55
+    },
+    {
+      "producto": "fideos",
+      "img": 11,
+      "desc": "Fideos Arcor cabello de angel 500gr",
+      "categ": ["almacén"],
+      "precio": 55
+    },
+    {
+      "producto": "fideos",
+      "img": 12,
+      "desc": "Fideos Arcor mostachol 500gr",
+      "categ": ["almacén"],
+      "precio": 55
+    },
+    {
+      "producto": "fideos",
+      "img": 13,
+      "desc": "Fideos Terrabusi mostachol 500gr",
+      "categ": ["almacén"],
+      "precio": 65
+    },
+    {
+      "producto": "galletitas",
+      "img": 14,
+      "desc": "Galletita 9 de oro 210gr",
+      "categ": ["almacén"],
+      "precio": 65
+    },
+    {
+      "producto": "galletitas",
+      "img": 15,
+      "desc": "Galletita 9 de oro 210gr",
+      "categ": ["almacén"],
+      "precio": 65
+    },
+    {
+      "producto": "galletitas",
+      "img": 16,
+      "desc": "Galletita Maná 130gr",
+      "categ": ["almacén"],
+      "precio": 59
+    },
+    {
+      "producto": "galletitas",
+      "img": 17,
+      "desc": "Galletita Arcor surtida 400gr",
+      "categ": ["almacén"],
+      "precio": 110
+    },
+    {
+      "producto": "galletitas",
+      "img": 18,
+      "desc": "Galletita Paseo crackers 300gr",
+      "categ": ["almacén"],
+      "precio": 89
+    },
+    {
+      "producto": "galletitas",
+      "img": 19,
+      "desc": "Galletita Tody 126gr",
+      "categ": ["almacén"],
+      "precio": 85
+    },
+    {
+      "producto": "gelletitas",
+      "img": 20,
+      "desc": "Galletita Arcor formis 72gr",
+      "categ": ["almacén"],
+      "precio": 45
+    },
+
+    {
+      "producto": "choclo",
+      "img": 21,
+      "desc": "Choclo blanco cremoso 320gr",
+      "categ": ["almacén", "conservas"],
+      "precio": 65
+    },
+    {
+      "producto": "choclo",
+      "img": 22,
+      "desc": "Choclo amarillo Arcor 320 gr",
+      "categ": ["almacén", "conservas"],
+      "precio": 79
+    },
+    {
+      "producto": "durazno mitades",
+      "img": 23,
+      "desc": "Durazno mitades Agrosabor 820gr",
+      "categ": ["almacén", "conservas"],
+      "precio": 160
+    },
+    {
+      "producto": "arvejas",
+      "img": 24,
+      "desc": "Arvejas Inalpa 350 gr",
+      "categ": ["almacén"],
+      "precio": 41.65
+    },
+    {
+      "producto": "yogurt",
+      "img": 25,
+      "desc": "Yogurt cremoso Tregar 320 gr",
+      "categ": ["almacén", "lacteos", "fresco"],
+      "precio": 29
+    },
+    {
+      "producto": "yogurt",
+      "img": 26,
+      "desc": "Yogurt entero Tregar con copos",
+      "categ": ["almacén", "lacteos", "fresco"],
+      "precio": 78
+    },
+    {
+      "producto": "queso",
+      "img": 27,
+      "desc": "Queso untable Tregar 250grf",
+      "categ": ["almacén", "lacteos", "fresco"],
+      "precio": 110
+    },
+    {
+      "producto": "queso",
+      "img": 28,
+      "desc": "Queso rallado Manfrey 120gr",
+      "categ": ["almacén", "lacteos", "fresco"],
+      "precio": 185
+    },
+    {
+      "producto": "frutas y verduras",
+      "img": 29,
+      "desc": "Palta hass kg",
+      "categ": ["frescos"],
+      "precio": 435
+    },
+    {
+      "producto": "frutas y verduras ",
+      "img": 30,
+      "desc": "Pepino kg",
+      "categ": ["frescos"],
+      "precio": 135
+    },
+    {
+      "producto": "frutas y verduras",
+      "img": 31,
+      "desc": "Mandarina kg",
+      "categ": ["frescos"],
+      "precio": 69
+    },
+    {
+      "producto": "carne",
+      "img": 32,
+      "desc": "Vacio de ternera kg",
+      "categ": ["frescos"],
+      "precio": 590
+    },
+    {
+      "producto": "carne",
+      "img": 33,
+      "desc": "Costilla envasada al vacio kg",
+      "categ": ["frescos"],
+      "precio": 750
+    },
+    {
+      "producto": "bebida con alcohol",
+      "img": 34,
+      "desc": "Fernet Branca 750 cc",
+      "categ": ["almacén", "bebidas"],
+      "precio": 689
+    },
+    {
+      "producto": "bebida con alcohol",
+      "img": 35,
+      "desc": "Fernet Vittone 450cc",
+      "categ": ["almacén", "bebida"],
+      "precio": 298
+    },
+    {
+      "producto": "bebida con alcohol ",
+      "img": 36,
+      "desc": "Vino espumante Progenie extra brut 750 ml",
+      "categ": ["almacén", "bebida"],
+      "precio": 458
+    },
+    {
+      "producto": "bebida con alcohol",
+      "img": 37,
+      "desc": "Vino King malbec 750 ml",
+      "categ": ["almacén", "bebida"],
+      "precio": 439
+    },
+    {
+      "producto": "bebida con alcohol",
+      "img": 38,
+      "desc": "Vino Los Cardos cabernet sauvignon 750 ml",
+      "categ": ["almacén", "bebida"],
+      "precio": 389
+    },
+    {
+      "producto": "bebida con alcohol",
+      "img": 39,
+      "desc": "Vino Lobo con piel de Cordero malbec 750 ml",
+      "categ": ["almacén", "bebida"],
+      "precio": 359
+    },
+    {
+      "producto": "bebida con alcohol",
+      "img": 40,
+      "desc": "Vino Doña Paula cabernet sauvignon 750 ml",
+      "categ": ["almacén", "bebida"],
+      "precio": 235
+    },
+    {
+      "producto": "cafe",
+      "img": 41,
+      "desc": "Cafe Dolca suave instantaneo 500 gr",
+      "categ": ["almacén"],
+      "precio": 195
+    },
+    {
+      "producto": "cafe ",
+      "img": 42,
+      "desc": "Cafe Arlistan 50gr",
+      "categ": ["almacén"],
+      "precio": 110
+    },
+    {
+      "producto": "cafe",
+      "img": 43,
+      "desc": "Cafe molido Arcafe colombia 500gr",
+      "categ": ["almacén"],
+      "precio": 285
+    },
+    {
+      "producto": "limpieza",
+      "img": 44,
+      "desc": "Desinfectante de piso Lisorform 420 ml",
+      "categ": ["almacén", "limpieza"],
+      "precio": 135
+    },
+    {
+      "producto": "limpieza",
+      "img": 45,
+      "desc": "Limpiador Glade 900ml",
+      "categ": ["almacén", "limpieza"],
+      "precio": 89
+    },
+    {
+      "producto": "limpieza",
+      "img": 46,
+      "desc": "Listo en el balde Quimpro botella 1 lt",
+      "categ": ["almacén", "limpieza"],
+      "precio": 180
+    },
+    {
+      "producto": "limpieza",
+      "img": 47,
+      "desc": "Lustra muebles Blem aerosol 360 ml",
+      "categ": ["almacén", "limpieza"],
+      "precio": 149
+    },
+    {
+      "producto": "limpieza",
+      "img": 48,
+      "decripción": "Limpiador multiuso Mr Musculos 450cc ",
+      "categ": ["almacén", "limpieza"],
+      "precio": 190
+    },
+    {
+      "producto": "perfumeria",
+      "img": 49,
+      "desc": "Alcohol en gel Portal 1lt",
+      "categ": ["perfumeria"],
+      "precio": 245
+    },
+    {
+      "producto": "perfumeria",
+      "img": 50,
+      "desc": "Jabon liquido Organic 400cc",
+      "categ": ["perfumeria"],
+      "precio": 245
+    },
+    {
+      "producto": "perfumeria",
+      "img": 51,
+      "desc": "Gel limpiador de manos Organic",
+      "categ": ["perfumeria"],
+      "precio": 345
+    },
+    {
+      "producto": "perfumeria",
+      "img": 52,
+      "desc": "Jabon liquido Organic 400cc",
+      "categ": ["perfumeria"],
+      "precio": 255
+    },
+    {
+      "producto": "perfumeria",
+      "img": 53,
+      "desc": "Desodorante roll on Ecoderme",
+      "categ": ["perfumeria"],
+      "precio": 245
+    },
+    {
+      "producto": "bebida sin alcohol ",
+      "img": 54,
+      "desc": "Gaseosa Sprite limon 1,5 lts",
+      "categ": ["bebida"],
+      "precio": 160
+    },
+    {
+      "producto": "bebida sin alcohol ",
+      "img": 55,
+      "desc": "Gasesosa Pritty limon 2,25 lts",
+      "categ": ["bebida"],
+      "precio": 145
+    },
+    {
+      "producto": "bebida  sin alcohol",
+      "img": 56,
+      "desc": "Jugo en polvo Arcor 20 gr",
+      "categ": ["bebida"],
+      "precio": 17
+    },
+    {
+      "producto": "bebida sin alcohol",
+      "img": 57,
+      "desc": "Jugo en polvo Bc 9,3 gr",
+      "categ": ["bebida"],
+      "precio": 19
+    },
+    {
+      "producto": "bebida sin alcohol ",
+      "img": 58,
+      "desc": "Jugo Minerva 250cc",
+      "categ": ["bebida"],
+      "precio": 125
+    },
+    {
+      "producto": "bebida con alcohol",
+      "img": 59,
+      "desc": "Cerveza Quilmes lata 467cc",
+      "categ": ["bebida"],
+      "precio": 145
+    },
+    {
+      "producto": "bebida con alcohol ",
+      "img": 60,
+      "desc": "Cerveza Andes lata 467cc",
+      "categ": ["bebida"],
+      "precio": 189
+    }
+  ]
+}
