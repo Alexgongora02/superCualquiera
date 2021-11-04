@@ -10,13 +10,13 @@ function App() {
     <Router>
       <Provider store={store}>
         <h1 className="mx-auto bg-primary text-center p-2">Navbar</h1>
-        <div className="container">
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/login" render={() => <h1>Login</h1>} />
-            <Route path="/contact" render={() => <h1>Contact</h1>} />
-          </Switch>
-        </div>
+
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/login" render={() => <h1>Login</h1>} />
+          <Route path="/contact" render={() => <h1>Contact</h1>} />
+        </Switch>
+
         <footer className="mx-auto bg-primary text-center text-white mt-3 pb-1">
           <h4>Footer</h4>
         </footer>

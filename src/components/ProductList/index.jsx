@@ -5,7 +5,7 @@ import ProductCard from "./ProductCard";
 export default function Index() {
   const products = useSelector((state) => state.products);
   return (
-    <div className="d-flex flex-wrap mx-auto justify-content-evenly gap-3 bg-light p-4 rounded">
+    <div className="mx-auto bg-light p-4 rounded gap-1 row">
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}

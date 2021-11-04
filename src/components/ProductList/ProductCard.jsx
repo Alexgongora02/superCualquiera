@@ -3,7 +3,7 @@ import React from "react";
 export default function ProductCard({ product }) {
   const { producto, img, desc, precio } = product
   return (
-    <div className="card text-center" style={{width: "15rem" }}>
+    <div className="card text-center col-sm-4 col-md-3 mx-auto">
       <img
         src={img}
         className="card-img-top"

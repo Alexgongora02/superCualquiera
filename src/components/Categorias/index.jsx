@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Categorias() {
   return (
-    <div className="btn-group mx-auto my-4 d-flex" role="group">
+    <div className="btn-group mx-auto my-4 d-flex flex-wrap" role="group">
       <button type="button" className="btn btn-outline-primary">
         Almacén
       </button>
