@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import "./App.css";
+import Login from "./pages/LOGIN/Login";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <div className="container">
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/login" render={() => <h1>Login</h1>} />
+            <Route path="/login" component={Login} />
             <Route path="/contact" render={() => <h1>Contact</h1>} />
           </Switch>
         </div>
