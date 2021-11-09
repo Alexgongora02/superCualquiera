@@ -8,7 +8,8 @@ import UploadProducts from "./components/UploadProducts";
 import Login from "./pages/LOGIN/Login";
 import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
-import Footer from "./components/Footer"
+import Footer from "./components/Footer";
+
 
 
 
@@ -19,6 +20,7 @@ function App() {
         <Navbar />
         <div className="container">
             <Switch>
+               
                <Route exact path="/" component={Home} />
                <Route path="/Form" component={Form} />
                <Route path="/login" component={Login} />
