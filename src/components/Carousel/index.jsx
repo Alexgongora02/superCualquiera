@@ -48,7 +48,7 @@ export default function Carousel() {
         </div>
         <div className="carousel-item">
           <img
-            src="./assets/carousel/carousel-3.webp"
+            src="./assets/carousel/carousel-5.webp"
             className="d-block w-100"
             alt="..."
           />
