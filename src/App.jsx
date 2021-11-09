@@ -4,9 +4,11 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Form from "./components/Form";
 import Home from "./components/Home";
-
 import "./App.css";
 import Login from "./pages/LOGIN/Login";
+import Categorias from "./components/Categorias";
+
+
 
 
 function App() {
@@ -17,14 +19,21 @@ function App() {
         <div className="container">
           <Switch>
             <Route exact path="/" component={Home} />
-
+            
             <Route exact path="/" component={Form} />
-           
+            
+            <Route path="/" component={Login} />
 
-            <Route path="/login" component={Login} />
-           
+            <Route path="/" component={Categorias} />
 
-          </Switch>
+            
+
+
+
+
+
+            </Switch>
+            
             <Route path="/contact" render={() => <Form/>} />
         </div>
         <footer>

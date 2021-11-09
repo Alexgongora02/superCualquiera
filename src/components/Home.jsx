@@ -6,6 +6,9 @@ import Tarjetas from "./Tarjetas";
 import Navbar from "./Navbar/Navbar";
 
 
+
+
+
 export default function Home() {
   return (
     <div className="container">
@@ -14,6 +17,9 @@ export default function Home() {
       <Categorias />
       <ProductList />
       <Tarjetas />
+      
+      
+      
     </div>
   );
 }
