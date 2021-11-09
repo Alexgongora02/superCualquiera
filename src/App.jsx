@@ -8,7 +8,7 @@ import UploadProducts from "./components/UploadProducts";
 import Login from "./pages/LOGIN/Login";
 import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
-
+import Footer from "./components/Footer"
 
 
 
@@ -29,9 +29,9 @@ function App() {
 
 
         </div>
-        <footer>
+        <Footer>
           <h4>Footer</h4>
-        </footer>
+        </Footer>
       </Provider>
     </Router>
   );
