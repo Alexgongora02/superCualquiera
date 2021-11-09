@@ -6,11 +6,12 @@ import Home from "./components/Home";
 import "./App.css";
 import Login from "./pages/LOGIN/Login";
 
+
 function App() {
   return (
     <Router>
       <Provider store={store}>
-        <h1 className="mx-auto">Navbar</h1>
+        
         <div className="container">
           <Switch>
             <Route exact path="/" component={Home} />
