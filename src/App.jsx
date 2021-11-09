@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import "./App.css";
 import Login from "./pages/LOGIN/Login";
+import Footer from "./components/Footer"
 
 function App() {
   return (
@@ -18,9 +19,9 @@ function App() {
             <Route path="/contact" render={() => <h1>Contact</h1>} />
           </Switch>
         </div>
-        <footer>
+        <Footer>
           <h4>Footer</h4>
-        </footer>
+        </Footer>
       </Provider>
     </Router>
   );
