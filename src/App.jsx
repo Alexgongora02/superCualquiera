@@ -6,6 +6,7 @@ import Form from "./components/Form";
 import Home from "./components/Home";
 import UploadProducts from "./components/UploadProducts";
 import Login from "./pages/LOGIN/Login";
+import Navbar from "./components/Navbar/Navbar";
 
 import "./App.css";
 
@@ -14,7 +15,7 @@ function App() {
   return (
     <Router>
       <Provider store={store}>
-        
+        <Navbar />
         <div className="container">
           <Switch>
             <Route exact path="/" component={Home} />

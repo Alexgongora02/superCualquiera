@@ -4,7 +4,7 @@ import "./Navbar.css";
 export default function Navbar(onSearch) {
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-primary rounded-bottom">
-      <div className="container-fluid">
+      <div className="container container-fluid">
         <a className="navbar-brand" href="/">
           <img src="./assets/logo.png" alt="logo" width="80" />
         </a>
