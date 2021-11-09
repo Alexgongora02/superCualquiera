@@ -4,9 +4,10 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Form from "./components/Form";
 import Home from "./components/Home";
+import UploadProducts from "./components/UploadProducts";
+import Login from "./pages/LOGIN/Login";
 
 import "./App.css";
-import Login from "./pages/LOGIN/Login";
 
 function App() {
   return (
@@ -16,15 +17,10 @@ function App() {
         <div className="container">
           <Switch>
             <Route exact path="/" component={Home} />
-
-            <Route exact path="/" component={Form} />
-           
-
+            <Route path="/contact" component={Form} />
             <Route path="/login" component={Login} />
-           
-
+            <Route path="/upload" component={UploadProducts} />
           </Switch>
-            <Route path="/contact" render={() => <Form/>} />
         </div>
         <footer>
           <h4>Footer</h4>
