@@ -11,6 +11,7 @@ import "./App.css";
 
 
 
+
 function App() {
   return (
     <Router>
@@ -19,9 +20,10 @@ function App() {
         <div className="container">
             <Switch>
                <Route exact path="/" component={Home} />
-               <Route path="/contact" component={Form} />
+               <Route path="/Form" component={Form} />
                <Route path="/login" component={Login} />
                <Route path="/upload" component={UploadProducts} />
+               
                
             </Switch>
 
