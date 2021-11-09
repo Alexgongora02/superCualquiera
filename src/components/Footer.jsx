@@ -37,29 +37,40 @@ return(
                 <li>Acceso clientes</li>
                 <li> Contactanos</li>
               </ul>
+              </div>
+
+
+          <div className="row">
+            <div className="col-sm-4"></div>
               <h4> Preguntas Frecuentes</h4>
               <ul className="list-unstyled">
                 <li> Terminos y condiciones</li>
                 <li>Defensa de las y los consumidores</li>
                 <li>Contanos tu experiencia  </li>
               </ul>
+            </div>
+          </div>
+
+
+          <div className="row">
+            <div className="col-sm-4">
               <h4> SuperCualquiera</h4>
               <ul className="list-unstyled">
                 <li>Sociedad Anonima Importadora y Exportadora</li>
                 <li>Cuit:30-2588888954-15</li>
                 <li>Sospecha 285 Las Parejas</li>
               </ul>
+            </div>
+          </div>
+
+          
               <div className="row">
                 <p className="col-sm">Acepto terminos y condiciones @SuperCualquiera</p>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-
-
-
+        
+  
     </>
   )
 }
