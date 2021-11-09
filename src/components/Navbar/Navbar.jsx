@@ -1,45 +1,62 @@
-import React from "react"
+import React from "react";
 import "./Navbar.css";
 
 export default function Navbar(onSearch) {
-    return (
-    <container>
-            
-        <nav className="navbar navbar-expand-lg navbar-ligh bg-ligh">
-              <a className="navbar-brand"style={{color:'black'}} >logo</a>
-   
-             <div className="collapse navbar-collapse" id="navbarSupportedContent">
-           <ul className="navbar-nav mr-auto">
-             <li className="nav-item active">
-               <a className="nav-link" href=""style={{color:'black',padding:'20px'}}>Categorias</a>
-               
-             </li>
-                   <nav class="navbar">
-                     <form class="form-inline">
-                           <input className="text" type="text" placeholder="Buscar"></input>
-                           <button type="button" class="btn btn-outline-dark">Buscar</button>
-                       </form>
-         </nav>
-      
-                 <li className="nav-item">
-                   <a className="nav-link" href="#"style={{color:'black',width:'7rem',padding:'20px'}}>Lista</a>
-                 </li>
-                  <li className="nav-item">
-                  <a className="nav-link" href="#"style={{color:'black',width:'7rem',padding:'20px'}}>Ingresar</a>
-         </li>
-         <li class="nav-item">
-               <a className="nav-link" href="#"style={{color:'black',padding:'20px'}}>Carrito</a>
-         </li>
-              </ul>
-   
-             </div>
-                </nav>
-         
-    </container>
-      
-          
-     
+  return (
+    <nav className="navbar navbar-expand-md navbar-dark bg-primary rounded-bottom">
+      <div className="container container-fluid">
+        <a className="navbar-brand" href="/">
+          <img src="./assets/logo.png" alt="logo" width="80" />
+        </a>
+        <button
+          className="navbar-toggler collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar"
+          aria-controls="navbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-        
- )
-  }
+        <div className="navbar-collapse collapse" id="navbar">
+          <ul className="navbar-nav d-flex justify-content-around" style={{width: "100%"}}>
+            <li className="nav-item">
+              <a className="nav-link" href="/">
+                Categorias
+              </a>
+            </li>
+
+            <form className="form-inline d-flex">
+              <input
+                className="form-control"
+                type="text"
+                placeholder="Buscar"
+              />
+              <button type="button" className="btn btn-light btn-outline-dark">
+                Buscar
+              </button>
+            </form>
+
+            <li className="nav-item">
+              <a className="nav-link" href="/">
+                Lista
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/">
+                Ingresar
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/">
+                Carrito
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
+}

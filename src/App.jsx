@@ -4,10 +4,10 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Form from "./components/Form";
 import Home from "./components/Home";
-import "./App.css";
+import UploadProducts from "./components/UploadProducts";
 import Login from "./pages/LOGIN/Login";
-import Categorias from "./components/Categorias";
-
+import Navbar from "./components/Navbar/Navbar";
+import "./App.css";
 
 
 
@@ -15,26 +15,17 @@ function App() {
   return (
     <Router>
       <Provider store={store}>
-        
+        <Navbar />
         <div className="container">
-          <Switch>
-            <Route exact path="/" component={Home} />
-            
-            <Route exact path="/" component={Form} />
-            
-            <Route path="/" component={Login} />
-
-            <Route path="/" component={Categorias} />
-
-            
-
-
-
-
-
+            <Switch>
+               <Route exact path="/" component={Home} />
+               <Route path="/contact" component={Form} />
+               <Route path="/login" component={Login} />
+               <Route path="/upload" component={UploadProducts} />
+               
             </Switch>
-            
-            <Route path="/contact" render={() => <Form/>} />
+
+
         </div>
         <footer>
           <h4>Footer</h4>
@@ -44,4 +35,21 @@ function App() {
   );
 }
 
-export default App;
+export default App;   
+
+
+
+
+
+            
+            
+           
+
+           
+    
+
+
+
+
+
+
