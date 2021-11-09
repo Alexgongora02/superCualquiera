@@ -9,7 +9,7 @@ import Login from "./pages/LOGIN/Login";
 import Navbar from "./components/Navbar/Navbar";
 
 import "./App.css";
-
+import Footer from "./components/Footer"
 
 function App() {
   return (
@@ -24,9 +24,9 @@ function App() {
             <Route path="/upload" component={UploadProducts} />
           </Switch>
         </div>
-        <footer>
+        <Footer>
           <h4>Footer</h4>
-        </footer>
+        </Footer>
       </Provider>
     </Router>
   );
