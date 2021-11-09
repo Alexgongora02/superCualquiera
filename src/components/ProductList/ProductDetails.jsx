@@ -66,7 +66,7 @@ export default function ProductDetails({ product }) {
                 +
               </button>
             </div>
-            <span class="badge bg-success">$ {(precio * amount).toFixed(2)}</span>
+            <span className="badge bg-success">$ {(precio * amount).toFixed(2)}</span>
             <button type="button" className="btn btn-primary">
               Añadir
             </button>

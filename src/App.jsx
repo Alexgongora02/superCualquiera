@@ -4,28 +4,25 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Form from "./components/Form";
 import Home from "./components/Home";
+import UploadProducts from "./components/UploadProducts";
+import Login from "./pages/LOGIN/Login";
+import Navbar from "./components/Navbar/Navbar";
 
 import "./App.css";
-import Login from "./pages/LOGIN/Login";
 import Footer from "./components/Footer"
 
 function App() {
   return (
     <Router>
       <Provider store={store}>
-        <h1 className="mx-auto">Navbar</h1>
+        <Navbar />
         <div className="container">
           <Switch>
             <Route exact path="/" component={Home} />
-
-            <Route exact path="/" component={Form} />
-           
-
+            <Route path="/contact" component={Form} />
             <Route path="/login" component={Login} />
-           
-
+            <Route path="/upload" component={UploadProducts} />
           </Switch>
-            <Route path="/contact" render={() => <Form/>} />
         </div>
         <Footer>
           <h4>Footer</h4>
