@@ -9,11 +9,12 @@ import Login from "./pages/LOGIN/Login";
 
 import "./App.css";
 
+
 function App() {
   return (
     <Router>
       <Provider store={store}>
-        <h1 className="mx-auto">Navbar</h1>
+        
         <div className="container">
           <Switch>
             <Route exact path="/" component={Home} />
