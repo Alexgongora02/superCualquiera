@@ -1,9 +1,13 @@
 import React from 'react'
 
+
 export default function Carrito() {
   return (
     <div>
-      <h1>hola</h1>
+      <h3>
+        Carrito de Compras
+      </h3>
+      
     </div>
   )
 }

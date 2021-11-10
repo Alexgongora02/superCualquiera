@@ -9,6 +9,11 @@ import Login from "./pages/LOGIN/Login";
 import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
 import Footer from "./components/Footer";
+import Categorias from "./components/Navbar/Categorias";
+import Buscar from "./components/Navbar/Buscar";
+import Lista from "./components/Navbar/Lista";
+import Carrito from "./components/Navbar/Carrito";
+
 
 
 
@@ -18,6 +23,7 @@ function App() {
     <Router>
       <Provider store={store}>
         <Navbar />
+        
         <div className="container">
             <Switch>
                
@@ -25,6 +31,11 @@ function App() {
                <Route path="/Form" component={Form} />
                <Route path="/login" component={Login} />
                <Route path="/upload" component={UploadProducts} />
+               <Route path="/Categorias" component={Categorias} />
+               <Route path="/Carrito" component={Carrito} />
+               <Route path="/Lista" component={Lista} />
+               <Route path="/Buscar" component={Buscar} /> 
+               
                
                
             </Switch>
