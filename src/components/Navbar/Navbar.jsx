@@ -6,7 +6,7 @@ export default function Navbar(onSearch) {
     <nav className="navbar navbar-expand-md navbar-dark bg-primary rounded-bottom">
       <div className="container container-fluid">
         <a className="navbar-brand" href="/">
-          <img src="./assets/logo.png" alt="logo" width="80" />
+          <img className="bg-white rounded-circle p-1" src="./assets/logo.png" alt="logo" width="80" />
         </a>
         <button
           className="navbar-toggler collapsed"
@@ -23,34 +23,34 @@ export default function Navbar(onSearch) {
         <div className="navbar-collapse collapse" id="navbar">
           <ul className="navbar-nav d-flex justify-content-around" style={{width: "100%"}}>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <a className="nav-link text-white" href="/">
                 Categorias
               </a>
             </li>
 
-            <form className="form-inline d-flex">
+            <form className="form-group d-flex">
               <input
                 className="form-control"
                 type="text"
                 placeholder="Buscar"
               />
-              <button type="button" className="btn btn-light btn-outline-dark">
+              <button type="button" className="btn btn-light btn-outline-dark ">
                 Buscar
               </button>
             </form>
 
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <a className="nav-link text-white" href="/">
                 Lista
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <a className="nav-link text-white" href="/">
                 Ingresar
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <a className="nav-link text-white" href="/">
                 Carrito
               </a>
             </li>
