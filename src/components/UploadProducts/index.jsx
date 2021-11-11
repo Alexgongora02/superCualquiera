@@ -1,71 +1,56 @@
 import React, { useState } from "react";
-
-export function validate(input) {
-  let errors = {};
-  if (!input.producto) {
-    errors.producto = true;
-  }
-  if (!input.descripcion) {
-    errors.descripcion = true;
-  }
-  if (!input.precio) {
-    errors.precio = true;
-  }
-  return errors;
-}
+import { addProduct } from "../../firebase/fireStore.js";
 
 export default function UploadProducts() {
+  const [categorias, setCategorias] = useState([]);
   const [errors, setErrors] = useState({});
   const [input, setInput] = useState({
     producto: "",
-    img: "",
+    img: "https://via.placeholder.com/150",
     desc: "",
     categ: "",
     precio: "",
+    stock: "",
   });
   const [image, setImage] = useState("");
   const [imagePreview, setImagePreview] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [categorias, setCategorias] = useState([]);
 
   const handleInputChange = function (e) {
     setInput({
       ...input,
       [e.target.name]: e.target.value,
     });
-    setErrors(
-      validate({
-        ...input,
-        [e.target.name]: e.target.value,
-      })
-    );
+    setErrors({
+      ...errors,
+      [e.target.name]: !e.target.value,
+    });
   };
-
   const handleSubmit = async (e) => {
     if (Object.entries(errors).length > 0 && image) {
       setLoading(true);
-      setInput({
+      let product = {
         ...input,
-        img: await uploadImage(),
-      });
-
-      const producto = e.target.producto.value;
-      const descripcion = e.target.descripcion.value;
-      const precio = e.target.precio.value;
-      if ((producto && imagePreview && descripcion, categorias, precio)) {
-        const PRODUCT = {
-          producto: producto,
-          img: await uploadImage(),
-          desc: descripcion,
-          categ: categorias,
-          precio: precio,
-        };
-        console.log(PRODUCT);
-      } else {
+        categ: categorias.length > 0 ? categorias : "",
+      };
+      //check if product has empty fields
+      if (Object.values(product).some((value) => value === "")) {
+        setLoading(false);
         alert("Completa todos los campos");
+        return;
       }
+      const imgURL = await uploadImage();
+      product.img = imgURL;
+      addProduct(product);
+
+      //reset form
+      e.target.parentNode.parentNode.reset();
+      setImagePreview(false);
+      setCategorias([]);
 
       setLoading(false);
+    } else {
+      alert("Completa todos los campos");
     }
   };
   const uploadImage = async () => {
@@ -80,7 +65,13 @@ export default function UploadProducts() {
       }
     );
     const file = await res.json();
-    return file.secure_url;
+    return new Promise((resolve, reject) => {
+      if (file.secure_url) {
+        resolve(file.secure_url);
+      } else {
+        reject(file.error);
+      }
+    });
   };
   const handleImagePreview = (e) => {
     const file = e.target.files[0];
@@ -92,11 +83,25 @@ export default function UploadProducts() {
         setImagePreview(this.result);
       });
     }
+    setErrors({
+      ...errors,
+      [e.target.name]: !e.target.value,
+    });
   };
   const handleCategoryChange = (e) => {
+    if (categorias.length < 1) {
+      setErrors({
+        ...errors,
+        categorias: true,
+      });
+    }
     if (e.key === "Enter" && e.target.value !== "") {
       setCategorias([...categorias, e.target.value]);
       e.target.value = "";
+      setErrors({
+        ...errors,
+        categorias: false,
+      });
     }
   };
 
@@ -120,16 +125,17 @@ export default function UploadProducts() {
             )}
           </label>
           <input
+            name="productImage"
             id="productImage"
             type="file"
-            className="form-control"
+            className={`form-control ${errors.productImage && "is-invalid"}`}
             accept="image/*"
             onChange={handleImagePreview}
           />
         </div>
 
         {/* PRODUCTO */}
-        <div className="form-group position-relative">
+        <div className="form-group">
           <label htmlFor="producto" className="form-label mt-4">
             Producto:
           </label>
@@ -150,8 +156,8 @@ export default function UploadProducts() {
           </label>
           <input
             type="text"
-            name="descripcion"
-            className={`form-control ${errors.descripcion && "is-invalid"}`}
+            name="desc"
+            className={`form-control ${errors.desc && "is-invalid"}`}
             id="descripcion"
             placeholder="Ej: Presto Pronta 1kg sin sodio"
             onChange={(e) => handleInputChange(e)}
@@ -163,7 +169,12 @@ export default function UploadProducts() {
           <label htmlFor="categoria" className="form-label mt-4">
             Categorías:
           </label>
-          <div className="form-control d-flex flex-wrap gap-1" id="categoria">
+          <div
+            className={`form-control d-flex flex-wrap gap-1 ${
+              errors.categorias && "is-invalid"
+            }`}
+            id="categoria"
+          >
             {categorias.map((categoria, index) => {
               return (
                 <div key={index}>
@@ -200,19 +211,35 @@ export default function UploadProducts() {
         <div className="form-group">
           <label className="form-label mt-4">Precio:</label>
           <div className="form-group">
-            <div className="input-group mb-3">
+            <div className="input-group">
               <span className="input-group-text">$</span>
               <input
                 name="precio"
                 id="precio"
                 type="number"
-                className={`form-control ${errors.descripcion && "is-invalid"}`}
+                className={`form-control ${errors.precio && "is-invalid"}`}
                 aria-label="Precio"
                 onChange={(e) => handleInputChange(e)}
               />
             </div>
           </div>
         </div>
+
+        {/* STOCK */}
+        <div className="form-group mb-3">
+          <label htmlFor="stock" className="form-label mt-4">
+            Stock:
+          </label>
+          <input
+            type="number"
+            name="stock"
+            className={`form-control ${errors.stock && "is-invalid"}`}
+            id="stock"
+            placeholder="Cantidad de producto disponible"
+            onChange={(e) => handleInputChange(e)}
+          />
+        </div>
+
         <button
           type="button"
           className="btn btn-primary"
