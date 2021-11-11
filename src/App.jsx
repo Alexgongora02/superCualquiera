@@ -24,6 +24,7 @@ function App() {
       <Provider store={store}>
         <Navbar />
         
+        
         <div className="container">
             <Switch>
                
