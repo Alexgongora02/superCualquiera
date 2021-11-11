@@ -39,7 +39,7 @@ export default function ProductDetails({ product }) {
           </div>
           <div className="modal-body d-flex flex-column flex-sm-row text-center justify-content-center">
             <div className="container">
-              <img src={img} alt={producto} />
+              <img src={img} alt={producto} width="100%"/>
             </div>
 
             <div className="container d-flex flex-column justify-content-center p-2">
