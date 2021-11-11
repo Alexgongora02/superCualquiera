@@ -1,14 +1,9 @@
 import { collection, addDoc } from "firebase/firestore";
-import { db } from "./firebase/firebase";
+import { db } from "./firebase";
 
-export const addProduct = async () => {
+export const addProduct = async (product) => {
   try {
-    const docRef = await addDoc(collection(db, "productos"), {
-      nombre: "Harina",
-      imgURL: "2",
-      desc: "1kg, De arroz",
-      categ: ["almacen", "panaderia"],
-    });
+    const docRef = await addDoc(collection(db, "productos"), product);
     console.log("Document written with ID: ", docRef.id);
   } catch (e) {
     console.error("Error adding document: ", e);
