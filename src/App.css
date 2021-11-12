@@ -1,11 +1,14 @@
 :root {
-  --primary: #0d6efd;
-  --secondary: #ff715b;
+  --primary: #278BE3;
+  --secondary: #D44848;
   --accent: #bced09;
   --ligth: #ecf8f8;
 }
 
+
+
 body {
+
   background-color: #fff;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }

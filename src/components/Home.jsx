@@ -4,6 +4,11 @@ import Carousel from "./Carousel";
 import Categorias from "./Categorias";
 import Tarjetas from "./Tarjetas";
 
+
+
+
+
+
 export default function Home() {
   return (
     <div className="container">
@@ -11,6 +16,11 @@ export default function Home() {
       <Categorias />
       <ProductList />
       <Tarjetas />
+     
+     
+      
+      
+      
     </div>
   );
 }

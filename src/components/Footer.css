@@ -1,4 +1,5 @@
-.main-footer{
+
+/* .main-footer{
     color: white;
     background-color:rgb(245, 53, 53);
     padding-top:3rm;
@@ -6,8 +7,13 @@
     bottom:0;
     width: 100%;
     font-size:small;
-    
+}  
+     */
+footer {
+  overflow: hidden;
+  background-color: var(--secondary);
 }
-
- 
-
+.top-footer {
+  background-color: var(--primary);
+  
+}
