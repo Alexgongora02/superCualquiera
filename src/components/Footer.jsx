@@ -38,6 +38,7 @@ return(
                 <li> Contactanos</li>
               </ul>
               </div>
+              </div>
 
 
           <div className="row">
@@ -63,12 +64,12 @@ return(
             </div>
           </div>
 
-          
+
               <div className="row">
                 <p className="col-sm">Acepto terminos y condiciones @SuperCualquiera</p>
               </div>
             </div>
-          </div>
+        
         
   
     </>
