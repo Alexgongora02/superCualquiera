@@ -3,7 +3,7 @@ import "./Navbar.css";
 
 export default function Navbar(onSearch) {
   return (
-    <nav className="navbar navbar-expand-md navbar-dark bg-primary rounded-bottom">
+    <nav className="navbar navbar-expand-md navbar-dark bg-primary fixed-top rounded-bottom">
       <div className="container container-fluid">
         <a className="navbar-brand" href="/">
           <img className="bg-white rounded-circle p-1" src="./assets/logo.png" alt="logo" width="80" />
@@ -28,13 +28,13 @@ export default function Navbar(onSearch) {
               </a>
             </li>
 
-            <form className="form-group d-flex">
+            <form className="form-inline d-flex">
               <input
                 className="form-control"
                 type="text"
                 placeholder="Buscar"
               />
-              <button type="button" className="btn btn-light btn-outline-dark ">
+              <button type="button" className="btn btn-success ">
                 Buscar
               </button>
             </form>

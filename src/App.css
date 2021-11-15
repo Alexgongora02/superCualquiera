@@ -8,7 +8,10 @@
 
 
 body {
-
   background-color: #fff;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.container-main {
+  margin-top: 7rem
 }

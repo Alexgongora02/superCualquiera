@@ -24,7 +24,7 @@ function App() {
       <Provider store={store}>
         <Navbar />
         
-        <div className="container">
+        <div className="container container-main">
             <Switch>
                
                <Route exact path="/" component={Home} />

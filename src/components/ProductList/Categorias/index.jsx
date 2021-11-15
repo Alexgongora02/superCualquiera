@@ -16,7 +16,7 @@ export default function Categorias({ setFilter, filter }) {
       {categorias.map((categoria) => (
         <button
           type="button"
-          className={`btn btn-outline-primary rounded-0 ${filter === categoria && `active`}`}
+          className={`btn btn-outline-primary rounded-0 text-capitalize ${filter === categoria && `active`}`}
           key={categoria}
           onClick={() => setFilter(categoria)}
         >

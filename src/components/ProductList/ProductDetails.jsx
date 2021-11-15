@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 
 export default function ProductDetails({ product }) {
-  const { producto, img, desc, precio, id } = product;
+  const { producto, img, desc, precio, id, stock } = product;
+  const [disponible, setDisponible] = useState(stock);
 
   const [amount, setAmount] = useState(1);
   const decrease = () => {
     if (amount > 1) {
       setAmount(amount - 1);
+      setDisponible(disponible + 1);
     }
-
-  }
+  };
   const increase = () => {
     if (amount < 10) {
       setAmount(amount + 1);
+      setDisponible(disponible - 1);
     }
-  }
+  };
 
   return (
     <div
@@ -39,13 +41,14 @@ export default function ProductDetails({ product }) {
           </div>
           <div className="modal-body d-flex flex-column flex-sm-row text-center justify-content-center">
             <div className="container">
-              <img src={img} alt={producto} width="100%"/>
+              <img src={img} alt={producto} width="100%" />
             </div>
 
             <div className="container d-flex flex-column justify-content-center p-2">
               <p className="text-danger fs-1 fw-bold">$ {precio.toFixed(2)}</p>
               <h5 className="card-title text-capitalize">{producto}</h5>
               <p className="card-text fw-light">{desc}</p>
+              <small className="text-muted">Disponibles: {disponible}</small>
             </div>
           </div>
           <div className="modal-footer d-flex flex-column">
@@ -66,7 +69,9 @@ export default function ProductDetails({ product }) {
                 +
               </button>
             </div>
-            <span className="badge bg-success">$ {(precio * amount).toFixed(2)}</span>
+            <span className="badge bg-success">
+              $ {(precio * amount).toFixed(2)}
+            </span>
             <button type="button" className="btn btn-primary">
               Añadir
             </button>
