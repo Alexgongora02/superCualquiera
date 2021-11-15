@@ -1,5 +1,5 @@
 import React from "react";
-import "./Navbar.css";
+
 
 export default function Navbar(onSearch) {
   return (
@@ -8,7 +8,7 @@ export default function Navbar(onSearch) {
         <a className="navbar-brand" href="/">
           <img className="bg-white rounded-circle p-1" src="./assets/logo.png" alt="logo" width="80" />
         </a>
-        <button
+         <button
           className="navbar-toggler collapsed"
           type="button"
           data-bs-toggle="collapse"
@@ -18,12 +18,12 @@ export default function Navbar(onSearch) {
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
-        </button>
+        </button> 
 
         <div className="navbar-collapse collapse" id="navbar">
           <ul className="navbar-nav d-flex justify-content-around" style={{width: "100%"}}>
             <li className="nav-item">
-              <a className="nav-link text-white" href="/">
+              <a className="nav-link text-white" href="/categorias">
                 Categorias
               </a>
             </li>
@@ -34,23 +34,23 @@ export default function Navbar(onSearch) {
                 type="text"
                 placeholder="Buscar"
               />
-              <button type="button" className="btn btn-success ">
+              <button type="button" className="btn btn-light btn-outline-dark">
                 Buscar
               </button>
             </form>
 
             <li className="nav-item">
-              <a className="nav-link text-white" href="/">
+              <a className="nav-link text-white" href="/Lista">
                 Lista
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white" href="/">
+              <a className="nav-link text-white" href="/Ingresar">
                 Ingresar
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white" href="/">
+              <a className="nav-link text-white" href="/Carrito">
                 Carrito
               </a>
             </li>
