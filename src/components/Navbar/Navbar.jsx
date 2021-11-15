@@ -1,14 +1,19 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 
 export default function Navbar(onSearch) {
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-primary fixed-top rounded-bottom">
       <div className="container container-fluid">
-        <a className="navbar-brand" href="/">
-          <img className="bg-white rounded-circle p-1" src="./assets/logo.png" alt="logo" width="80" />
-        </a>
-         <button
+        <Link className="navbar-brand" to="/">
+          <img
+            className="bg-white rounded-circle p-1"
+            src="./assets/logo.png"
+            alt="logo"
+            width="80"
+          />
+        </Link>
+        <button
           className="navbar-toggler collapsed"
           type="button"
           data-bs-toggle="collapse"
@@ -18,14 +23,17 @@ export default function Navbar(onSearch) {
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
-        </button> 
+        </button>
 
         <div className="navbar-collapse collapse" id="navbar">
-          <ul className="navbar-nav d-flex justify-content-around" style={{width: "100%"}}>
+          <ul
+            className="navbar-nav d-flex justify-content-around"
+            style={{ width: "100%" }}
+          >
             <li className="nav-item">
-              <a className="nav-link text-white" href="/categorias">
+              <Link className="nav-link text-white" to="/categorias">
                 Categorias
-              </a>
+              </Link>
             </li>
 
             <form className="form-inline d-flex">
@@ -40,19 +48,19 @@ export default function Navbar(onSearch) {
             </form>
 
             <li className="nav-item">
-              <a className="nav-link text-white" href="/Lista">
+              <Link className="nav-link text-white" to="/Lista">
                 Lista
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white" href="/Ingresar">
+              <Link className="nav-link text-white" to="/Ingresar">
                 Ingresar
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white" href="/Carrito">
+              <Link className="nav-link text-white" to="/Carrito">
                 Carrito
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

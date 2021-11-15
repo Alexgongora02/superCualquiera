@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 export default function Footer() {
@@ -12,9 +13,9 @@ export default function Footer() {
               <p className="card-text">
                 Tenes dudas podemos ayudarte 📞0800-444-53864
               </p>
-              <a href="/" className="btn btn-success">
+              <Link to="/" className="btn btn-success">
                 Suscribite
-              </a>
+              </Link>
             </div>
           </div>
           <div className="card col-sm-5 mx-auto my-2">
@@ -23,9 +24,9 @@ export default function Footer() {
               <p className="card-text">
                 Boton de arrepentimiento para cancelar tu compra
               </p>
-              <a href="/" className="btn btn-success">
+              <Link to="/" className="btn btn-success">
                 Cancelar
-              </a>
+              </Link>
             </div>
           </div>
         </div>
