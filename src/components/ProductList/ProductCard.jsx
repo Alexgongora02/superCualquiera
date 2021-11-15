@@ -23,7 +23,7 @@ export default function ProductCard({ product }) {
         </button>
         <button className="btn btn-success">Carrito</button>
       </div>
-      <ProductDetails product={product}/>
+      <ProductDetails product={product} />
     </div>
   );
 }

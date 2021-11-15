@@ -1,19 +1,16 @@
 const initialState = {
-  counter: 0,
   products: [],
+  categorias: [],
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case "ADD":
-      return {
-        ...state,
-        counter: state.counter + 1,
-      };
+    
     case "FETCH_STORE":
       return {
         ...state,
-        products: action.payload,
+        products: action.payload.products,
+        categorias: action.payload.uniqueCategs,
       };
     default:
       return state;

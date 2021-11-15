@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchStore } from "./../../store/actions/actions";
 import ProductCard from "./ProductCard";
+import Categorias from "./Categorias";
 
 export default function Index() {
+  const [filter, setFilter] = useState(false);
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products);
 
@@ -12,19 +14,29 @@ export default function Index() {
     dispatch(fetchStore());
   }, [dispatch]);
 
+  const lista = (() => {
+    if (filter) {
+      return products.filter((product) => product.categ.includes(filter));
+    } else {
+      return products;
+    }
+  })();
   return (
-    <div className="mx-auto bg-light p-4 rounded row">
-      {products.length > 0 ? (
-        products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))
-      ) : (
-        <div className="text-center">
-          <div className="spinner-grow text-primary" role="status">
-            <span className="sr-only"></span>
+    <>
+      <Categorias setFilter={setFilter} filter={filter} />
+      <div className="mx-auto bg-light p-4 rounded row">
+        {lista.length > 0 ? (
+          lista.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))
+        ) : (
+          <div className="text-center">
+            <div className="spinner-grow text-primary" role="status">
+              <span className="sr-only"></span>
+            </div>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+    </>
   );
 }

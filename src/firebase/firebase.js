@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import firebaseui from "firebaseui";
-
+// import firebaseui from "firebaseui";
 
 const { REACT_APP_FB_API_KEY } = process.env;
 
@@ -13,26 +12,23 @@ const firebaseConfig = {
   messagingSenderId: "153862341676",
   appId: "1:153862341676:web:bbed0c93d130b04b3f7d89",
 };
-const uiConfig = {
-  singOptions:[
-    firebase.auth.EmailAuthProvider_PROVIDER_ID,
-    firebase.auth.GoogleAuthProvider_PROVIDER_ID,
-  ],
-  
-};
+// const uiConfig = {
+//   singOptions: [
+//     firebase.auth.EmailAuthProvider_PROVIDER_ID,
+//     firebase.auth.GoogleAuthProvider_PROVIDER_ID,
+//   ],
+// };
 
 initializeApp(firebaseConfig);
 
-
 export const db = getFirestore();
-export const auth= firebase.auth();
+// export const auth = firebase.auth();
 
+// db.settings({
+//   timestampsInSnapshots: true,
+// });
 
-db.settings({
-  timestampsInSnapshots: true,
-});
-
-export const startUi =(elementId)=>{
-  const ui= new firebaseui.auth.AuthId(auth);
-  ui.start(elementId , uiConfig);
-};
+// export const startUi = (elementId) => {
+//   const ui = new firebaseui.auth.AuthId(auth);
+//   ui.start(elementId, uiConfig);
+// };
