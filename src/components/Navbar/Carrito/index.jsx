@@ -1,25 +1,10 @@
 import React, { useState } from "react";
-import "./carrito.css";
 import ProductItem from "./ProductItem";
+import "./carrito.css";
 
-export default function Carrito() {
-  const [show, setShow] = useState(true);
-
-  const handleClick = () => {
-    setShow(!show);
-  };
+export default function Carrito({ close, show }) {
   return (
     <div className={`card carrito ${show ? "mostrar" : "oculto"}`}>
-      <div className="modal-header p-0 m-0 ">
-        <button
-          type="button"
-          className="close mx-auto btn "
-          onClick={handleClick}
-        >
-          Carrito <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-
       <div className="card-body d-flex flex-column gap-1 bg-white m-3 p-1">
         <ProductItem />
         <ProductItem />
@@ -32,6 +17,7 @@ export default function Carrito() {
         </div>
         <button className="btn btn-success mx-auto">Comprar</button>
       </div>
+      <span className="btn text-primary badge rounded-pill bg-warning mx-auto" onClick={close}>^</span>
     </div>
   );
 }

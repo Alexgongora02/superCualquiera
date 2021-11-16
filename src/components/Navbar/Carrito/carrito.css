@@ -6,7 +6,7 @@
   background-color: #c4c4c4;
   max-width: 30rem;
   max-height: 100%;
-  transition: all 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out;
   overflow: hidden;
 }
 

@@ -11,7 +11,6 @@ import Footer from "./components/Footer/Footer";
 import Categorias from "./components/Navbar/Categorias";
 import Buscar from "./components/Navbar/Buscar";
 import Lista from "./components/Navbar/Lista";
-import Carrito from "./components/Carrito";
 import "./App.css";
 
 function App() {
@@ -20,14 +19,12 @@ function App() {
       <Provider store={store}>
         <Navbar />
         <div className="container container-main">
-          <Carrito />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/contact" component={Form} />
             <Route path="/login" component={Login} />
             <Route path="/upload" component={UploadProducts} />
             <Route path="/categorias" component={Categorias} />
-            <Route path="/carrito" component={Carrito} />
             <Route path="/lista" component={Lista} />
             <Route path="/buscar" component={Buscar} />
           </Switch>
