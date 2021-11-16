@@ -1,12 +1,15 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Carrito from "./Carrito";
 
 export default function Navbar(onSearch) {
-  const [show, setShow] = useState(true);
-  const [expand, setExpand] = useState(false);
-  const hadleExpand = () => {
-    setExpand(!expand);
+  const [show, setShow] = useState(false);
+  const itemsCarrito = useSelector((state) => state.carrito.length);
+
+  const handleShow = (e) => {
+    const element = e.target.parentNode.parentNode.parentNode;
+    element.classList.remove("show");
   };
 
   const handleClick = () => {
@@ -38,15 +41,11 @@ export default function Navbar(onSearch) {
 
           <div className="navbar-collapse collapse" id="navbar">
             <ul
-              className="navbar-nav d-flex justify-content-around"
+              className="navbar-nav d-flex justify-content-around align-items-center"
               style={{ width: "100%" }}
             >
-              <li className="nav-item">
-                <Link
-                  className="nav-link text-white"
-                  to="/categorias"
-                  onClick={() => console.log("categorias")}
-                >
+              <li className="nav-item" onClick={handleShow}>
+                <Link className="nav-link text-white" to="/categorias">
                   Categorias
                 </Link>
               </li>
@@ -60,39 +59,35 @@ export default function Navbar(onSearch) {
                 <button
                   type="button"
                   className="btn btn-light btn-outline-dark"
+                  onClick={handleShow}
                 >
                   Buscar
                 </button>
               </form>
 
-              <li
-                className="nav-item"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbar.show"
-              >
+              <li className="nav-item" onClick={handleShow}>
                 <Link className="nav-link text-white" to="/Lista">
                   Lista
                 </Link>
               </li>
-              <li
-                className="nav-item"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbar.show"
-              >
+              <li className="nav-item" onClick={handleShow}>
                 <Link className="nav-link text-white" to="/Ingresar">
                   Ingresar
                 </Link>
               </li>
-              <li
-                className="nav-item"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbar.show"
-              >
+              <li className="nav-item">
                 <button
-                  className="btn nav-link text-white"
+                  className="btn nav-link text-white btn-success px-2 position-relative"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
                   onClick={handleClick}
                 >
                   Carrito
+                  {itemsCarrito > 0 && (
+                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      {itemsCarrito}
+                    </span>
+                  )}
                 </button>
               </li>
             </ul>

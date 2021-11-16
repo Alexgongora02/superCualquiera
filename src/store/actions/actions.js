@@ -1,7 +1,6 @@
 import { db } from "./../../firebase/firebase";
 import { collection, getDocs } from "firebase/firestore";
 
-
 export const fetchStore = () => {
   return async (dispatch) => {
     const querySnapshot = await getDocs(collection(db, "productos"));
@@ -16,7 +15,7 @@ export const fetchStore = () => {
     if (products.length > 0) {
       dispatch({
         type: "FETCH_STORE",
-        payload: {products, uniqueCategs},
+        payload: { products, uniqueCategs },
       });
     } else {
       console.log("No se encontraron productos");
@@ -24,3 +23,21 @@ export const fetchStore = () => {
     }
   };
 };
+
+export const addCarrito = (product, cantidad = 1) => {
+  const payload = {
+    ...product,
+    cantidad,
+  };
+  return {
+    type: "ADD_TO_CART",
+    payload,
+  };
+};
+
+export const removeCarrito = (id) => {
+  return {
+    type: "REMOVE_FROM_CART",
+    payload: id,
+  };
+}

@@ -1,8 +1,14 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { addCarrito } from "../../store/actions/actions";
 import ProductDetails from "./ProductDetails";
 
 export default function ProductCard({ product }) {
   const { producto, img, desc, precio, id } = product;
+  const dispatch = useDispatch();
+  const handleAddCarrito = () => {
+    dispatch(addCarrito(product));
+  };
   return (
     <div className="d-flex col-sm-4 col-md-3 p-1">
       <div className="card text-center" style={{ width: "100%" }}>
@@ -21,7 +27,9 @@ export default function ProductCard({ product }) {
             </p>
           </div>
         </button>
-        <button className="btn btn-success">Carrito</button>
+        <button className="btn btn-success" onClick={handleAddCarrito}>
+          Carrito
+        </button>
       </div>
       <ProductDetails product={product} />
     </div>

@@ -1,10 +1,21 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addCarrito } from "../../store/actions/actions";
 
 export default function ProductDetails({ product }) {
   const { producto, img, desc, precio, id, stock } = product;
-  const [disponible, setDisponible] = useState(stock);
-
   const [amount, setAmount] = useState(1);
+  const [disponible, setDisponible] = useState(stock);
+  const dispatch = useDispatch();
+
+  const handleAdd = () => {
+    if (disponible > 0) {
+      dispatch(addCarrito(product, amount));
+      setAmount(1);
+    }
+    document.getElementById(id).click();
+  };
+
   const decrease = () => {
     if (amount > 1) {
       setAmount(amount - 1);
@@ -33,6 +44,7 @@ export default function ProductDetails({ product }) {
               {producto}
             </h5>
             <button
+              id={id}
               type="button"
               className="btn-close"
               data-bs-dismiss="modal"
@@ -72,7 +84,11 @@ export default function ProductDetails({ product }) {
             <span className="badge bg-success">
               $ {(precio * amount).toFixed(2)}
             </span>
-            <button type="button" className="btn btn-primary">
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={handleAdd}
+            >
               Añadir
             </button>
           </div>
