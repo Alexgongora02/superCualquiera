@@ -1,0 +1,28 @@
+.carrito {
+  position: fixed;
+  right: 0;
+  top: 6.5rem;
+  z-index: 100;
+  background-color: #c4c4c4;
+  max-width: 30rem;
+  max-height: 100%;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.oculto {
+  max-height: 0rem;
+}
+.close {
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.close span {
+  background-color: coral;
+  color: white;
+  border-radius: 4px;
+  font-size: 2rem;
+  padding: 0rem 0.5rem;
+}

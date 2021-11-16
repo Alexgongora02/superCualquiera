@@ -1,11 +1,9 @@
 :root {
-  --primary: #278BE3;
-  --secondary: #D44848;
+  --primary: #278be3;
+  --secondary: #d44848;
   --accent: #bced09;
   --ligth: #ecf8f8;
 }
-
-
 
 body {
   background-color: #fff;
@@ -13,5 +11,6 @@ body {
 }
 
 .container-main {
-  margin-top: 7rem
+  position: relative;
+  margin-top: 7rem;
 }

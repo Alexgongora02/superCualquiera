@@ -7,29 +7,29 @@ import Home from "./components/Home";
 import UploadProducts from "./components/UploadProducts";
 import Login from "./pages/LOGIN/Login";
 import Navbar from "./components/Navbar/Navbar";
-import "./App.css";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 import Categorias from "./components/Navbar/Categorias";
 import Buscar from "./components/Navbar/Buscar";
 import Lista from "./components/Navbar/Lista";
-import Carrito from "./components/Navbar/Carrito";
+import Carrito from "./components/Carrito";
+import "./App.css";
 
 function App() {
   return (
     <Router>
       <Provider store={store}>
         <Navbar />
-
         <div className="container container-main">
+          <Carrito />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/Form" component={Form} />
+            <Route path="/contact" component={Form} />
             <Route path="/login" component={Login} />
             <Route path="/upload" component={UploadProducts} />
-            <Route path="/Categorias" component={Categorias} />
-            <Route path="/Carrito" component={Carrito} />
-            <Route path="/Lista" component={Lista} />
-            <Route path="/Buscar" component={Buscar} />
+            <Route path="/categorias" component={Categorias} />
+            <Route path="/carrito" component={Carrito} />
+            <Route path="/lista" component={Lista} />
+            <Route path="/buscar" component={Buscar} />
           </Switch>
         </div>
         <Footer>
