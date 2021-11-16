@@ -37,18 +37,42 @@ export default function Footer() {
           <div className="col-sm-4 p-4">
             <h4 className="text-ligth fw-bold">Nuestra Tarjeta</h4>
             <ul className="list-unstyled">
-              <li>Quiero mi tarjeta</li>
-              <li>Acceso clientes</li>
-              <li> Contactanos</li>
+            <li className="nav-item">
+              <Link className="nav-link text-white" to="/ Quiero mi tarjeta">
+              Quiero mi tarjeta
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link text-white" to="/Acceso clientes">
+              Acceso clientes
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link text-white" to="/form">
+              Contactanos
+              </Link>
+            </li>
             </ul>
           </div>
 
           <div className="col-sm-4 p-4">
             <h4 className="text-ligth fw-bold"> Preguntas Frecuentes</h4>
             <ul className="list-unstyled">
-              <li> Terminos y condiciones</li>
-              <li>Defensa de las y los consumidores</li>
-              <li>Contanos tu experiencia </li>
+            <li className="nav-item">
+              <Link className="nav-link text-white" to="/Terminos y condiciones">
+              Terminos y condiciones
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link text-white" to="/Defensa de los consumidores">
+              Defensa de los consumidores
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link text-white" to="/Contanos tu experiencia">
+                Contanos tu experiencia
+              </Link>
+            </li>
             </ul>
           </div>
           <div className="col-sm-4 p-4">
