@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 export default function Navbar(onSearch) {
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-primary fixed-top rounded-bottom">
@@ -31,7 +32,7 @@ export default function Navbar(onSearch) {
             style={{ width: "100%" }}
           >
             <li className="nav-item">
-              <Link className="nav-link text-white" to="/categorias">
+              <Link className="nav-link dropdown-toggle"  to="/Categorias" style={{color:"white"}}>
                 Categorias
               </Link>
             </li>
