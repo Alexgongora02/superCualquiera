@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Form from "./components/Form";
 import Home from "./components/Home";
 import UploadProducts from "./components/UploadProducts";
-import Login from "./pages/LOGIN/Login";
+import Login from "./components/Login";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Categorias from "./components/Navbar/Categorias";
