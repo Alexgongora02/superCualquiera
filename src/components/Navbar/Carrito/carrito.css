@@ -1,8 +1,9 @@
 .carrito {
   position: fixed;
-  right: 0;
+  right: 0%;
   top: 6.5rem;
   z-index: 100;
+  margin-inline: 10%;
   max-width: 30rem;
   max-height: 100%;
   transition: max-height 0.5s ease-in-out;

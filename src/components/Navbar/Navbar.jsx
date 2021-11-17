@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Carrito from "./Carrito";
 
-
 export default function Navbar(onSearch) {
   const [show, setShow] = useState(false);
   const itemsCarrito = useSelector((state) => state.carrito.length);
@@ -72,7 +71,7 @@ export default function Navbar(onSearch) {
                 </Link>
               </li>
               <li className="nav-item" onClick={handleShow}>
-                <Link className="nav-link text-white" to="/Ingresar">
+                <Link className="nav-link text-white" to="/login">
                   Ingresar
                 </Link>
               </li>
