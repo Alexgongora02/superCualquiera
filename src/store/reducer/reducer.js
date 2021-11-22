@@ -43,6 +43,13 @@ const reducer = (state = initialState, action) => {
         ...state,
         carrito: newCarrito,
       };
+
+    case "CLEAR_CART":
+      return {
+        ...state,
+        carrito: [],
+      };
+
     default:
       return state;
   }

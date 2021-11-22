@@ -40,4 +40,10 @@ export const removeCarrito = (id) => {
     type: "REMOVE_FROM_CART",
     payload: id,
   };
-}
+};
+
+export const resetCarrito = () => {
+  return {
+    type: "CLEAR_CART",
+  };
+};

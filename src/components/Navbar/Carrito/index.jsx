@@ -7,8 +7,16 @@ import "./carrito.css";
 export default function Carrito({ close, show }) {
   //get carrito from redux with useSelector
   const carrito = useSelector((state) => state.carrito);
-  const total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
+  const total = carrito.reduce(
+    (acc, item) => acc + item.precio * item.cantidad,
+    0
+  );
   const history = useHistory();
+
+  const handlePay = () => {
+    history.push("/pago");
+    close();
+  };
 
   return (
     <div className={`card carrito ${show ? "mostrar" : "oculto"}`}>
@@ -26,7 +34,7 @@ export default function Carrito({ close, show }) {
                 $ {total.toFixed(2)}
               </p>
             </div>
-            <button className="btn btn-success mx-auto" onClick={()=> history.push('/pago')}>
+            <button className="btn btn-success mx-auto" onClick={handlePay}>
               Finalizar pedido
             </button>
             <small className="p-1">¡Envío a domicilio disponible!</small>
