@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { resetCarrito } from "./../../store/actions/actions";
+import { venta } from "./../../store/actions/actions";
 import Detalles from "./Detalles";
 import Comprador from "./Comprador";
 
@@ -28,7 +28,7 @@ export default function PagoDeCompra() {
 
   const handlePay = () => {
     alert("Gracias por su compra");
-    dispatch(resetCarrito());
+    dispatch(venta());
     history.push("/");
   };
 

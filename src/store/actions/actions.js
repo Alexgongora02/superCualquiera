@@ -1,5 +1,7 @@
 import { db } from "./../../firebase/firebase";
 import { collection, getDocs } from "firebase/firestore";
+import generateId from "../../utils/randomID";
+import fechaEntrega from "../../utils/fechaEntrega";
 
 export const fetchStore = () => {
   return async (dispatch) => {
@@ -42,8 +44,13 @@ export const removeCarrito = (id) => {
   };
 };
 
-export const resetCarrito = () => {
-  return {
-    type: "CLEAR_CART",
+export const venta = () => {
+  const id = generateId();
+  const entrega = fechaEntrega();
+  return async (dispatch) => {
+    dispatch({
+      type: "VENTA",
+      payload: { id, entrega },
+    });
   };
 };
