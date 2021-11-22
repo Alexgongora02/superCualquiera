@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Form from "./components/Form";
 import Home from "./components/Home";
 import UploadProducts from "./components/UploadProducts";
+import { Auth0Provider } from "@auth0/auth0-react";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -16,6 +17,11 @@ import "./App.css";
 function App() {
   return (
     <Router>
+      <Auth0Provider
+    domain="dev-2z251kkp.us.auth0.com"
+    clientId="iRTuS1osHTxttMzCXCngs2otqlkY0CjD"
+    redirectUri={window.location.origin}
+  >
       <Provider store={store}>
         <Navbar />
         <div className="container container-main">
@@ -33,6 +39,7 @@ function App() {
           <h4>Footer</h4>
         </Footer>
       </Provider>
+      </Auth0Provider>,
     </Router>
   );
 }
