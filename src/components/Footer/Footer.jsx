@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="mt-4">
       <div className="top-footer">
         <div className="row text-center gap-2">
-          <div className="card col-sm-5 mx-auto my-2">
+          <div className="card col-sm-3 mx-auto my-2">
             <div className="card-body">
               <h5 className="card-title fw-bold">Recibe Ofertas en tu email</h5>
               <p className="card-text">
@@ -18,7 +18,18 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-          <div className="card col-sm-5 mx-auto my-2">
+          <div className="card col-sm-3 mx-auto my-2">
+            <div className="card-body">
+              <h5 className="card-title fw-bold">Revisa tu compra</h5>
+              <p className="card-text">
+                Solo nesesitas el ID de tu pedido y podras el tiket y envío del mismo.
+              </p>
+              <Link to="/pedidos" className="btn btn-success">
+                Revisar
+              </Link>
+            </div>
+          </div>
+          <div className="card col-sm-3 mx-auto my-2">
             <div className="card-body">
               <h5 className="card-title fw-bold">Para cancelar tu compra</h5>
               <p className="card-text">

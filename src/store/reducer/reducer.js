@@ -4,30 +4,52 @@ const initialState = {
   carrito: [],
   pedidos: [
     {
-      entrega: "2021-11-24T19:17:53.965Z",
-      id: "4kql95vp7",
+      fechaEntrega: "2021-11-25T19:18:54.413Z",
+      id: "gt75ny2f0",
       carrito: [
         {
-          precio: 189,
-          desc: "Cerveza Andes lata 467cc",
+          img: "https://res.cloudinary.com/dkr9yv2oa/image/upload/v1636657268/f0b5auncwddmrxaqofvy.jpg",
+          desc: "Gasesosa Pritty limon 2,25 lts",
           categ: ["bebida"],
-          stock: "496",
-          img: "https://res.cloudinary.com/dkr9yv2oa/image/upload/v1636657386/cqurpm1lvqgd6nknsefu.jpg",
-          producto: "Cerveza",
-          id: "2NUHqP8XJewn5vcdGS6i",
+          stock: "263",
+          precio: 145,
+          producto: "Pritty",
+          id: "0hvyzIZZpbPSihPEwhGt",
+          cantidad: 2,
+        },
+        {
+          producto: "Galletitas",
+          precio: 45,
+          desc: "Arcor Formis 72gr",
+          img: "https://res.cloudinary.com/dkr9yv2oa/image/upload/v1636655949/zqclccscxtzck29gt81k.jpg",
+          stock: "250",
+          categ: ["almacén", "masitas"],
+          id: "2V7Qkzz6xt2GqhGY5Oa5",
+          cantidad: 2,
+        },
+        {
+          producto: "Harina",
+          precio: 99,
+          desc: "Blancaflor premezcla 1kg",
+          img: "https://res.cloudinary.com/dkr9yv2oa/image/upload/v1636655333/xy5zpuskl6fwvjdrjcre.jpg",
+          stock: "150",
+          categ: ["almacén"],
+          id: "3d0aT952ED9nIl5HTLuX",
           cantidad: 1,
         },
         {
-          stock: "250",
-          desc: "Arcor Formis 72gr",
-          img: "https://res.cloudinary.com/dkr9yv2oa/image/upload/v1636655949/zqclccscxtzck29gt81k.jpg",
-          producto: "Galletitas",
-          categ: ["almacén", "masitas"],
-          precio: 45,
-          id: "2V7Qkzz6xt2GqhGY5Oa5",
+          stock: "420",
+          producto: "Sprite",
+          img: "https://res.cloudinary.com/dkr9yv2oa/image/upload/v1636657239/fteozgl3tpsgy3gdv59m.jpg",
+          categ: ["bebida"],
+          precio: 160,
+          desc: "Gaseosa Sprite limon 1,5 lts",
+          id: "47POwPyIWtTDTcRi1Kyo",
           cantidad: 1,
         },
       ],
+      fechaPago: "2021-11-23T19:18:54.413Z",
+      total: 639,
     },
   ],
 };
@@ -73,15 +95,17 @@ const reducer = (state = initialState, action) => {
       };
 
     case "VENTA":
-      const pedidos = {
-        entrega: action.payload.entrega,
+      const pedido = {
+        fechaEntrega: action.payload.entrega,
         id: action.payload.id,
         carrito: state.carrito,
+        fechaPago: action.payload.fechaPago,
+        total: action.payload.total,
       };
       return {
         ...state,
         carrito: [],
-        pedidos: [...state.pedidos, pedidos],
+        pedidos: [...state.pedidos, pedido],
       };
 
     default:

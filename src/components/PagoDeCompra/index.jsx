@@ -26,10 +26,10 @@ export default function PagoDeCompra() {
     document.documentElement.scrollTop = 0;
   }, []);
 
-  const handlePay = () => {
+  const handlePay = async () => {
     alert("Gracias por su compra");
-    dispatch(venta());
-    history.push("/");
+    const id = await dispatch(venta(total));
+    history.push(`/exito/${id}`);
   };
 
   return (

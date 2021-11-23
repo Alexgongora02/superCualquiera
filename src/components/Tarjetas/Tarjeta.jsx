@@ -4,7 +4,7 @@ export default function Tarjeta({ card }) {
   return (
     <div className="card col-sm-4">
       <div className="card-body d-flex justify-content-around">
-        <button className="btn fs-4 fw-bold">25%</button>
+        <button className="btn fs-1 fw-bold">25% OFF</button>
         <button className="btn">
           <img
             src={card.img}

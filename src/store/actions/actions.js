@@ -44,13 +44,15 @@ export const removeCarrito = (id) => {
   };
 };
 
-export const venta = () => {
+export const venta = (total) => {
+  const fechaPago = new Date();
   const id = generateId();
   const entrega = fechaEntrega();
   return async (dispatch) => {
     dispatch({
       type: "VENTA",
-      payload: { id, entrega },
+      payload: { id, entrega, fechaPago, total },
     });
+    return id;
   };
 };

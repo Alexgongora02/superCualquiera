@@ -12,7 +12,9 @@ import Footer from "./components/Footer/Footer";
 import Categorias from "./components/Navbar/Categorias";
 import Lista from "./components/Navbar/Lista";
 import PagoDeCompra from "./components/PagoDeCompra";
+import Exito from "./components/PagoDeCompra/Exito"
 import Pedidos from "./components/Pedidos";
+
 import "./App.css";
 
 function App() {
@@ -34,6 +36,7 @@ function App() {
             <Route path="/categorias" component={Categorias} />
             <Route path="/lista" component={Lista} />
             <Route path="/pago" component={PagoDeCompra} />
+            <Route path="/exito/:id" component={Exito} />
             <Route path="/pedidos" component={Pedidos} />
           </Switch>
         </div>

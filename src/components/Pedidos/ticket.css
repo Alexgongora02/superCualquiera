@@ -1,0 +1,28 @@
+.ticket {
+  background-color: #f5f5f5;
+  margin: 2rem;
+  padding: 1rem;
+  max-width: 20rem;
+  font-size: 1.2rem;
+  font-family: "Courier New", Courier, monospace;
+}
+.ticket-header p {
+  padding: 0;
+  margin: 0;
+}
+
+.ticket-body {
+  margin-top: 1rem;
+}
+
+.producto {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+display: flex;
+justify-content: space-between;
+
+}
+

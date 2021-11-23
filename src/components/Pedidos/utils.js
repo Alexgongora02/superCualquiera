@@ -1,5 +1,5 @@
 //format fecha to display remaining days and hours in string format
-const formatFecha = (fecha) => {
+export const remaining = (fecha) => {
   const fechaActual = new Date();
   const fechaEntrega = new Date(fecha);
   const diferencia = fechaEntrega - fechaActual;
@@ -10,4 +10,18 @@ const formatFecha = (fecha) => {
   return `${dias} días y ${horas} horas`;
 };
 
-export default formatFecha;
+//function to format a date to locale format dd/mm/yyyy hh:mm
+export const formatDate = (fecha) => {
+  const date = new Date(fecha);
+  const options = {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+  };
+  return date.toLocaleString("es-ES", options);
+};
+
+
+
