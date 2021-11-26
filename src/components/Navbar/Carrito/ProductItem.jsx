@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { removeCarrito } from "./../../../store/actions/actions";
+import { removeCarrito, addCarrito } from "./../../../store/actions/actions";
 
 export default function ProductItem({ item }) {
   const { producto, img, desc, precio, cantidad } = item;
@@ -9,15 +9,18 @@ export default function ProductItem({ item }) {
   const handleRemove = () => {
     dispatch(removeCarrito(item.id));
   };
+  const handleAdd = () => {
+    dispatch(addCarrito(item));
+  }
 
   return (
     <div className="card d-flex flex-row position-relative">
       <button
         className="btn position-absolute top-0 start-0"
         style={{ marginLeft: "-10px" }}
-        onClick={handleRemove}
+        onClick={handleAdd}
       >
-        &#9940;
+        🔺
       </button>
       <p
         className="badge bg-info text-dark position-absolute top-50 start-0"
@@ -25,6 +28,13 @@ export default function ProductItem({ item }) {
       >
         {cantidad}
       </p>
+      <button
+        className="btn position-absolute top-0 start-0"
+        style={{ marginLeft: "-10px", marginTop: "60px" }}
+        onClick={handleRemove}
+      >
+        🔻
+      </button>
       <img
         className="card-img-top mx-1 my-auto"
         src={img}

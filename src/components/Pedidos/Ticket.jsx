@@ -3,15 +3,25 @@ import "./ticket.css";
 import { remaining, formatDate } from "./utils";
 
 export default function Ticket({ pedido }) {
+  // check if the date already passed
+  const date = new Date(pedido.fechaEntrega);
+  const entregado = date < new Date();
+
+
+
   return (
     <>
       <div className="alert alert-info mt-3 text-center">
         <h4 className="alert-heading">
           Fecha de entrega: <strong>{formatDate(pedido.fechaEntrega)}</strong>
         </h4>
+        {entregado ? <p className="mb-0">
+          Su pedido fue entregado con exito!
+        </p> : 
         <p className="mb-0">
-          Su pedido será en {remaining(pedido.fechaEntrega)}
+          Su pedido será entregado en {remaining(pedido.fechaEntrega)}
         </p>
+        }
       </div>
       <div className="ticket">
         <div className="container">
