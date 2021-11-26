@@ -19,13 +19,19 @@ export default function Navbar(onSearch) {
     <>
       <nav className="navbar navbar-expand-md navbar-dark bg-primary fixed-top rounded-bottom">
         <div className="container container-fluid">
-          <Link className="navbar-brand" to="/">
+          <Link className="navbar-brand position-relative" to="/">
             <img
               className="bg-white rounded-circle p-1"
               src="./assets/logo.png"
               alt="logo"
               width="80"
             />
+            <span
+              className="position-absolute bottom-0 start-0 bg-light shadow px-1 text-primary rounded navbar-collapse collapse"
+              style={{ marginLeft: "-25px", fontSize: "1rem" }}
+            >
+              SuperCualquiera
+            </span>
           </Link>
           <button
             className="navbar-toggler collapsed"
