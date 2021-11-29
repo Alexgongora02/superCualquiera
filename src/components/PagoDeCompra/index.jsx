@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { venta } from "./../../store/actions/actions";
 import Detalles from "./Detalles";
 import Comprador from "./Comprador";
+import Datepicker from "./Datepicker";
 
 //function to format price to local
 export const formatPrice = (price) => {
@@ -22,13 +23,21 @@ export default function PagoDeCompra() {
     0
   );
 
+  let date = new Date();
+  date.setDate(date.getDate() + 1);
+  const [fechaEntrega, setFechaEntrega] = useState(date);
+  const handleFechaEntrega = (date) => {
+    setFechaEntrega(date);
+
+  };
+
   useEffect(() => {
     document.documentElement.scrollTop = 0;
   }, []);
 
   const handlePay = async () => {
     alert("Gracias por su compra");
-    const id = await dispatch(venta(total));
+    const id = await dispatch(venta({total, fechaEntrega}));
     history.push(`/exito/${id}`);
   };
 
@@ -44,6 +53,10 @@ export default function PagoDeCompra() {
         </div>
         <div className="mt-3 bg-white shadow-sm">
           <Detalles carrito={carrito} />
+        </div>
+        <div className="mt-3 bg-white shadow-sm p-3">
+          <p className="">Fecha de entrega:</p>
+          <Datepicker handleChange={handleFechaEntrega} date={fechaEntrega} />
         </div>
         <div className="mt-3 bg-white shadow-sm">
           <Comprador total={formatPrice(total)} pagar={handlePay} />

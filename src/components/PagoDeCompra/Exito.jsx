@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Ticket from "../Pedidos/Ticket";
@@ -13,7 +13,6 @@ export default function Exito() {
     document.documentElement.scrollTop = 0;
   }, []);
 
-  console.log(pedidos);
   return (
     <div
       className="container d-flex justify-content-center row mx-auto"
