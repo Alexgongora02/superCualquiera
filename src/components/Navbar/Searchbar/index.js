@@ -18,7 +18,6 @@ export default function Searchbar() {
   };
 
   const handleClear = (e) => {
-    console.log("Clear");
     dispatch(resetSearch());
     e.target.parentNode.reset();
     e.target.parentNode.parentNode.parentNode.classList.remove("show");
