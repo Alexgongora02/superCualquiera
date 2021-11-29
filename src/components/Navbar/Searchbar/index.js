@@ -1,23 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { search, resetSearch } from "../../../store/actions/actions";
 
 export default function Searchbar() {
+  const [query, setQuery] = useState("");
   const dispatch = useDispatch();
 
-  const handleChange = (e) => {
-    dispatch(search(e.target.value));
-    if (e.target.value === "") {
+  useEffect(() => {
+    dispatch(search(query));
+    if (query === "") {
       dispatch(resetSearch());
     }
+  }, [query, dispatch]);
+
+  const handleChange = (e) => {
+    setQuery(e.target.value);
+  };
+
+  const handleClear = (e) => {
+    console.log("Clear");
+    dispatch(resetSearch());
+    e.target.parentNode.reset();
+    e.target.parentNode.parentNode.parentNode.classList.remove("show");
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const element = e.target.parentNode.parentNode;
-    element.classList.remove("show");
-    dispatch(resetSearch());
-    e.target.reset();
+    e.target.parentNode.parentNode.classList.remove("show");
   };
   return (
     <form
@@ -30,8 +39,15 @@ export default function Searchbar() {
         placeholder="Buscar"
         onChange={handleChange}
       />
-      <button type="submit" className="btn position-absolute end-0">
-        🔁
+      <button type="submit" className="btn position-absolute end-0 me-4">
+        🎯
+      </button>
+      <button
+        type="button"
+        className="btn position-absolute end-0"
+        onClick={handleClear}
+      >
+        ✖
       </button>
     </form>
   );
