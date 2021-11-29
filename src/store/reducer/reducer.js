@@ -1,5 +1,6 @@
 const initialState = {
   products: [],
+  productsFiltered: false,
   categorias: [],
   carrito: [],
   pedidos: [
@@ -56,6 +57,24 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
+    case "SEACRH_PRODUCT":
+      return {
+        ...state,
+        productsFiltered: state.products.filter(
+          (product) =>
+            product.producto
+              .toLowerCase()
+              .includes(action.payload.toLowerCase()) ||
+            product.desc.toLowerCase().includes(action.payload.toLowerCase())
+        ),
+      };
+
+    case "RESET_SEARCH":
+      return {
+        ...state,
+        productsFiltered: false,
+      };
+
     case "FETCH_STORE":
       return {
         ...state,

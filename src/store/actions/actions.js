@@ -43,6 +43,18 @@ export const removeCarrito = (id) => {
   };
 };
 
+export const search = (query) => {
+  return {
+    type: "SEACRH_PRODUCT",
+    payload: query,
+  };
+};
+export const resetSearch = () => {
+  return {
+    type: "RESET_SEARCH",
+  };
+};
+
 export const venta = ({ total, fechaEntrega }) => {
   const fechaPago = new Date();
   const id = generateId();

@@ -8,6 +8,7 @@ export default function Index() {
   const [filter, setFilter] = useState(false);
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products);
+  const isSearch = useSelector((state) => state.productsFiltered);
 
   //use useEffect to call one time when component is mounted
   useEffect(() => {
@@ -21,6 +22,23 @@ export default function Index() {
       return products;
     }
   })();
+
+  if (isSearch) {
+    return (
+      <div className="mx-auto bg-light p-4 rounded row">
+        {isSearch.length > 0 ? (
+          isSearch.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))
+        ) : (
+          <div className="text-center">
+            <h1>No hay resultados</h1>
+          </div>
+        )}
+      </div>
+    );
+  }
+
   return (
     <>
       <Categorias setFilter={setFilter} filter={filter} />
