@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import Carrito from "./Carrito";
 import Searchbar from "./Searchbar";
 
+
+
 export default function Navbar(onSearch) {
   const [show, setShow] = useState(false);
   const itemsCarrito = useSelector((state) => state.carrito.length);
@@ -70,8 +72,13 @@ export default function Navbar(onSearch) {
                 </Link>
               </li>
               <li className="nav-item" onClick={handleShow}>
+                <Link className="nav-link text-white" to="/Dashboard">
+                Panel de Control
+                </Link>
+              </li>
+              <li className="nav-item" onClick={handleShow}>
                 <Link className="nav-link text-white" to="/login">
-                  Ingresar
+                  Mi Cuenta
                 </Link>
               </li>
               <li className="nav-item">
