@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchStore } from "./../../store/actions/actions";
 import ProductCard from "./ProductCard";
-import Categorias from "./Categorias"
+import Categorias from "./Categorias";
+
 
 
 
