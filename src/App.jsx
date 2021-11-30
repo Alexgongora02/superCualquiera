@@ -9,8 +9,6 @@ import {useAuth0} from "@auth0/auth0-react"
 import UploadProducts from "./components/UploadProducts";
 import Login from "./components/Login";
 
-import Logout from "./components/Logout";
-import {Profile} from "./components/Profile";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Categorias from "./components/Navbar/Categorias";
@@ -33,8 +31,8 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route path="/form" component={Form} />
             <Route path="/login" component={Login}/>   
-            <Route path="/profile" component ={Profile}/>
-            <Route path="/logout" component={Logout}/>
+            
+            
             <Route path="/upload" component={UploadProducts} />
             <Route path="/categorias" component={Categorias} />
             <Route path="/lista" component={Lista} />
