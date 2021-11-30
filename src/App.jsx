@@ -4,10 +4,9 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Form from "./components/Form";
 import Home from "./components/Home";
-import {useAuth0} from "@auth0/auth0-react"
 
 import UploadProducts from "./components/UploadProducts";
-import Login from "./components/Login";
+import Login from "./components/Login/Login";
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -19,7 +18,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import "./App.css";
 
 function App() {
-  const {isAuthenticated} = useAuth0()
+  
   return (
     <Router>
       
