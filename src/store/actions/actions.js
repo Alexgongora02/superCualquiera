@@ -1,7 +1,6 @@
 import { db } from "./../../firebase/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import generateId from "../../utils/randomID";
-import fechaEntrega from "../../utils/fechaEntrega";
 
 export const fetchStore = () => {
   return async (dispatch) => {
@@ -44,10 +43,22 @@ export const removeCarrito = (id) => {
   };
 };
 
-export const venta = (total) => {
+export const search = (query) => {
+  return {
+    type: "SEACRH_PRODUCT",
+    payload: query,
+  };
+};
+export const resetSearch = () => {
+  return {
+    type: "RESET_SEARCH",
+  };
+};
+
+export const venta = ({ total, fechaEntrega }) => {
   const fechaPago = new Date();
   const id = generateId();
-  const entrega = fechaEntrega();
+  const entrega = fechaEntrega;
   return async (dispatch) => {
     dispatch({
       type: "VENTA",

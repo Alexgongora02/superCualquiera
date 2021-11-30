@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Carrito from "./Carrito";
+import Searchbar from "./Searchbar";
 
 export default function Navbar(onSearch) {
   const [show, setShow] = useState(false);
@@ -56,20 +57,7 @@ export default function Navbar(onSearch) {
                 </Link>
               </li>
 
-              <form className="form-inline d-flex">
-                <input
-                  className="form-control"
-                  type="text"
-                  placeholder="Buscar"
-                />
-                <button
-                  type="button"
-                  className="btn btn-light btn-outline-dark"
-                  onClick={handleShow}
-                >
-                  Buscar
-                </button>
-              </form>
+              <Searchbar handleShow={handleShow}/>
 
               <li className="nav-item" onClick={handleShow}>
                 <Link className="nav-link text-white" to="/Lista">
