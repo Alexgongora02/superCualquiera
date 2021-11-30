@@ -51,10 +51,15 @@ export default function Navbar(onSearch) {
               className="navbar-nav d-flex justify-content-around align-items-center"
               style={{ width: "100%" }}
             >
-              <li className="nav-item" onClick={handleShow}>
-                <Link className="nav-link text-white" to="/categorias">
-                  Categorias
+               <li className="nav-item" onClick={handleShow}>
+              <button type="button" 
+              class="btn nav-link text-white btn-success px-2 position-relative"
+              aria-expanded="false" 
+              style={{width:" 120px", height:"50px"}}>
+                <Link className="nav-link text-white" to="/Categorias">
+                   Categorias
                 </Link>
+              </button>
               </li>
 
               <Searchbar handleShow={handleShow}/>
