@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Carrito from "./Carrito";
 import Searchbar from "./Searchbar";
 
@@ -18,6 +18,13 @@ export default function Navbar(onSearch) {
   const handleClick = () => {
     setShow(!show);
   };
+
+  const location = useLocation();
+  const isDashboard = location.pathname === "/Dashboard";
+
+  if (isDashboard) {
+    return null;
+  }
   return (
     <>
       <nav className="navbar navbar-expand-md navbar-dark bg-primary fixed-top rounded-bottom">
@@ -55,7 +62,7 @@ export default function Navbar(onSearch) {
             >
                <li className="nav-item" onClick={handleShow}>
               <button type="button" 
-              class="btn nav-link text-white btn-success px-2 position-relative"
+              className="btn nav-link text-white btn-success px-2 position-relative"
               aria-expanded="false" 
               style={{width:" 120px", height:"50px"}}>
                 <Link className="nav-link text-white" to="/Categorias">

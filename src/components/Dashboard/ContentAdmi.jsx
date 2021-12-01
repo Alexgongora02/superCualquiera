@@ -1,25 +1,29 @@
-import React from 'react'
+import React from "react";
+import AsideAdmi from "./AsideAdmi";
 
 export default function ContentAdmi() {
-    return (
-       <div>
-  <div>
+  return (
     <div className="content-wrapper">
-      
       <div className="content-header">
         <div className="container-fluid">
           <div className="row mb-2">
             <div className="col-sm-6">
               <h1 className="m-0">Panel de Control v3</h1>
-            </div>{/* /.col */}
+            </div>
+            {/* /.col */}
             <div className="col-sm-6">
               <ol className="breadcrumb float-sm-right">
-                <li className="breadcrumb-item"><a href="#">Home</a></li>
+                <li className="breadcrumb-item">
+                  <a href="/">Home</a>
+                </li>
                 <li className="breadcrumb-item active">Panel de Control </li>
               </ol>
-            </div>{/* /.col */}
-          </div>{/* /.row */}
-        </div>{/* /.container-fluid */}
+            </div>
+            {/* /.col */}
+          </div>
+          {/* /.row */}
+        </div>
+        {/* /.container-fluid */}
       </div>
       {/* /.content-header */}
       {/* Main content */}
@@ -30,8 +34,10 @@ export default function ContentAdmi() {
               <div className="card">
                 <div className="card-header border-0">
                   <div className="d-flex justify-content-between">
-                    <h3 className="card-title">Visitantes de la Tienda Online</h3>
-                    <a href="javascript:void(0);">Vista Del Informe</a>
+                    <h3 className="card-title">
+                      Visitantes de la Tienda Online
+                    </h3>
+                    <a href="/">Vista Del Informe</a>
                   </div>
                 </div>
                 <div className="card-body">
@@ -66,10 +72,10 @@ export default function ContentAdmi() {
                 <div className="card-header border-0">
                   <h3 className="card-title">Productos</h3>
                   <div className="card-tools">
-                    <a href="#" className="btn btn-tool btn-sm">
+                    <a href="/" className="btn btn-tool btn-sm">
                       <i className="fas fa-download" />
                     </a>
-                    <a href="#" className="btn btn-tool btn-sm">
+                    <a href="/" className="btn btn-tool btn-sm">
                       <i className="fas fa-bars" />
                     </a>
                   </div>
@@ -87,7 +93,11 @@ export default function ContentAdmi() {
                     <tbody>
                       <tr>
                         <td>
-                          <img src="dist/img/default-150x150.png" alt="Product 1" className="img-circle img-size-32 mr-2" />
+                          <img
+                            src="dist/img/default-150x150.png"
+                            alt="Product 1"
+                            className="img-circle img-size-32 mr-2"
+                          />
                           Algunos Productos
                         </td>
                         <td>$13 USD</td>
@@ -99,14 +109,18 @@ export default function ContentAdmi() {
                           12,000 Vendida
                         </td>
                         <td>
-                          <a href="#" className="text-muted">
+                          <a href="/" className="text-muted">
                             <i className="fas fa-search" />
                           </a>
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          <img src="dist/img/default-150x150.png" alt="Product 1" className="img-circle img-size-32 mr-2" />
+                          <img
+                            src="dist/img/default-150x150.png"
+                            alt="Product 1"
+                            className="img-circle img-size-32 mr-2"
+                          />
                           Otro Producto
                         </td>
                         <td>$29 USD</td>
@@ -118,14 +132,18 @@ export default function ContentAdmi() {
                           123,234 Vendida
                         </td>
                         <td>
-                          <a href="#" className="text-muted">
+                          <a href="/" className="text-muted">
                             <i className="fas fa-search" />
                           </a>
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          <img src="dist/img/default-150x150.png" alt="Product 1" className="img-circle img-size-32 mr-2" />
+                          <img
+                            src="dist/img/default-150x150.png"
+                            alt="Product 1"
+                            className="img-circle img-size-32 mr-2"
+                          />
                           Producto en Oferta
                         </td>
                         <td>$1,230 USD</td>
@@ -137,14 +155,18 @@ export default function ContentAdmi() {
                           198 vendida
                         </td>
                         <td>
-                          <a href="#" className="text-muted">
+                          <a href="/" className="text-muted">
                             <i className="fas fa-search" />
                           </a>
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          <img src="dist/img/default-150x150.png" alt="Product 1" className="img-circle img-size-32 mr-2" />
+                          <img
+                            src="dist/img/default-150x150.png"
+                            alt="Product 1"
+                            className="img-circle img-size-32 mr-2"
+                          />
                           Articulo Preferido
                           <span className="badge bg-danger">NEW</span>
                         </td>
@@ -157,7 +179,7 @@ export default function ContentAdmi() {
                           87 Vendido
                         </td>
                         <td>
-                          <a href="#" className="text-muted">
+                          <a href="/" className="text-muted">
                             <i className="fas fa-search" />
                           </a>
                         </td>
@@ -174,7 +196,7 @@ export default function ContentAdmi() {
                 <div className="card-header border-0">
                   <div className="d-flex justify-content-between">
                     <h3 className="card-title">Ventas</h3>
-                    <a href="javascript:void(0);">View Report</a>
+                    <a href="/">View Report</a>
                   </div>
                 </div>
                 <div className="card-body">
@@ -207,12 +229,14 @@ export default function ContentAdmi() {
               {/* /.card */}
               <div className="card">
                 <div className="card-header border-0">
-                  <h3 className="card-title">Descripcion general de la tienda en linea</h3>
+                  <h3 className="card-title">
+                    Descripcion general de la tienda en linea
+                  </h3>
                   <div className="card-tools">
-                    <a href="#" className="btn btn-sm btn-tool">
+                    <a href="/" className="btn btn-sm btn-tool">
                       <i className="fas fa-download" />
                     </a>
-                    <a href="#" className="btn btn-sm btn-tool">
+                    <a href="/" className="btn btn-sm btn-tool">
                       <i className="fas fa-bars" />
                     </a>
                   </div>
@@ -224,7 +248,8 @@ export default function ContentAdmi() {
                     </p>
                     <p className="d-flex flex-column text-right">
                       <span className="font-weight-bold">
-                        <i className="ion ion-android-arrow-up text-success" /> 12%
+                        <i className="ion ion-android-arrow-up text-success" />{" "}
+                        12%
                       </span>
                       <span className="text-muted">Tasa de Conversion</span>
                     </p>
@@ -236,7 +261,8 @@ export default function ContentAdmi() {
                     </p>
                     <p className="d-flex flex-column text-right">
                       <span className="font-weight-bold">
-                        <i className="ion ion-android-arrow-up text-warning" /> 0.8%
+                        <i className="ion ion-android-arrow-up text-warning" />{" "}
+                        0.8%
                       </span>
                       <span className="text-muted">TASA DE VENTA</span>
                     </p>
@@ -248,7 +274,8 @@ export default function ContentAdmi() {
                     </p>
                     <p className="d-flex flex-column text-right">
                       <span className="font-weight-bold">
-                        <i className="ion ion-android-arrow-down text-danger" /> 1%
+                        <i className="ion ion-android-arrow-down text-danger" />{" "}
+                        1%
                       </span>
                       <span className="text-muted">TASA DE REGISTRO</span>
                     </p>
@@ -265,13 +292,5 @@ export default function ContentAdmi() {
       </div>
       {/* /.content */}
     </div>
-    {/* /.content-wrapper */}
-    {/* Control Sidebar */}
-    <aside className="control-sidebar control-sidebar-dark">
-      {/* Control sidebar content goes here */}
-    </aside>
-  </div>
-  )
-</div>
-    
-    )}
+  );
+}

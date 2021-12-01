@@ -1,8 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router";
 import "./Footer.css";
 
 export default function Footer() {
+  const location = useLocation();
+  const isDashboard = location.pathname === "/Dashboard";
+
+  if (isDashboard) {
+    return null;
+  }
+
   return (
     <footer className="mt-4">
       <div className="top-footer">
@@ -22,7 +30,8 @@ export default function Footer() {
             <div className="card-body">
               <h5 className="card-title fw-bold">Revisa tu compra</h5>
               <p className="card-text">
-                Solo nesesitas el ID de tu pedido y podras el tiket y envío del mismo.
+                Solo nesesitas el ID de tu pedido y podras el tiket y envío del
+                mismo.
               </p>
               <Link to="/pedidos" className="btn btn-success">
                 Revisar
@@ -48,42 +57,51 @@ export default function Footer() {
           <div className="col-sm-4 p-4">
             <h4 className="text-ligth fw-bold">Nuestra Tarjeta</h4>
             <ul className="list-unstyled">
-            <li className="nav-item">
-              <Link className="nav-link text-white" to="/ Quiero mi tarjeta">
-              Quiero mi tarjeta
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link text-white" to="/Acceso clientes">
-              Acceso clientes
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link text-white" to="/form">
-              Contactanos
-              </Link>
-            </li>
+              <li className="nav-item">
+                <Link className="nav-link text-white" to="/ Quiero mi tarjeta">
+                  Quiero mi tarjeta
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link text-white" to="/Acceso clientes">
+                  Acceso clientes
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link text-white" to="/form">
+                  Contactanos
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div className="col-sm-4 p-4">
             <h4 className="text-ligth fw-bold"> Preguntas Frecuentes</h4>
             <ul className="list-unstyled">
-            <li className="nav-item">
-              <Link className="nav-link text-white" to="/Terminos y condiciones">
-              Terminos y condiciones
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link text-white" to="/Defensa de los consumidores">
-              Defensa de los consumidores
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link text-white" to="/Contanos tu experiencia">
-                Contanos tu experiencia
-              </Link>
-            </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link text-white"
+                  to="/Terminos y condiciones"
+                >
+                  Terminos y condiciones
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link text-white"
+                  to="/Defensa de los consumidores"
+                >
+                  Defensa de los consumidores
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link text-white"
+                  to="/Contanos tu experiencia"
+                >
+                  Contanos tu experiencia
+                </Link>
+              </li>
             </ul>
           </div>
           <div className="col-sm-4 p-4">
@@ -95,7 +113,6 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-
         <p className="col-sm-12 text-center text-white bg-dark">
           Acepto terminos y condiciones © SuperCualquiera
         </p>

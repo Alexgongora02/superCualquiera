@@ -13,26 +13,22 @@ import Footer from "./components/Footer/Footer";
 import Categorias from "./components/Navbar/Categorias";
 import Lista from "./components/Navbar/Lista";
 import PagoDeCompra from "./components/PagoDeCompra";
-import Exito from "./components/PagoDeCompra/Exito"
+import Exito from "./components/PagoDeCompra/Exito";
 import Pedidos from "./components/Pedidos";
-import Dashboard from "./components/Dashboard/Dashboard"
+import Dashboard from "./components/Dashboard/Dashboard";
 import "./App.css";
 
 function App() {
-  
   return (
     <Router>
-      
-  
       <Provider store={store}>
         <Navbar />
         <div className="container container-main">
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/form" component={Form} />
-            <Route path="/login" component={Login}/>   
-            
-            
+            <Route path="/login" component={Login} />
+
             <Route path="/upload" component={UploadProducts} />
             <Route path="/categorias" component={Categorias} />
             <Route path="/lista" component={Lista} />
@@ -40,16 +36,10 @@ function App() {
             <Route path="/exito/:id" component={Exito} />
             <Route path="/pedidos" component={Pedidos} />
             <Route path="/dashboard" component={Dashboard} />
-            
-            
-        
           </Switch>
         </div>
-        <Footer>
-          <h4>Footer</h4>
-        </Footer>
+        <Footer />
       </Provider>
-     
     </Router>
   );
 }
