@@ -4,9 +4,6 @@ import { fetchStore } from "./../../store/actions/actions";
 import ProductCard from "./ProductCard";
 import Categorias from "./Categorias";
 
-
-
-
 export default function Index() {
   const [filter, setFilter] = useState(false);
   const dispatch = useDispatch();
@@ -47,9 +44,13 @@ export default function Index() {
       <Categorias setFilter={setFilter} filter={filter} />
       <div className="mx-auto bg-light p-4 rounded row">
         {lista.length > 0 ? (
-          lista.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))
+          lista.map((product) => {
+            if (filter) {
+              return <ProductCard key={product.id} product={product} />;
+            }
+            if (!product.categ.indexOf("Ofertas")) return null;
+            return <ProductCard key={product.id} product={product} />;
+          })
         ) : (
           <div className="text-center">
             <div className="spinner-grow text-primary" role="status">
