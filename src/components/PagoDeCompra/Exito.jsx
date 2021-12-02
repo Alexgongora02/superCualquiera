@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Ticket from "../Pedidos/Ticket";
@@ -8,10 +8,6 @@ export default function Exito() {
   const pedidos = useSelector((state) =>
     state.pedidos.find((pedido) => pedido.id === id)
   );
-
-  useEffect(() => {
-    document.documentElement.scrollTop = 0;
-  }, []);
 
   return (
     <div

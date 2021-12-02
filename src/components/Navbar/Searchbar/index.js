@@ -31,6 +31,7 @@ export default function Searchbar() {
     <form
       className="form-inline d-flex position-relative"
       onSubmit={handleSubmit}
+      style={{width: "18rem"}}
     >
       <input
         className="form-control"

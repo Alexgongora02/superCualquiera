@@ -127,6 +127,18 @@ const reducer = (state = initialState, action) => {
         pedidos: [...state.pedidos, pedido],
       };
 
+    case "CANCELAR_VENTA":
+      const newPedidos = state.pedidos.filter((pedido) => {
+        if (pedido.id === action.payload) {
+          return null;
+        }
+        return pedido;
+      });
+      return {
+        ...state,
+        pedidos: newPedidos,
+      };
+
     default:
       return state;
   }

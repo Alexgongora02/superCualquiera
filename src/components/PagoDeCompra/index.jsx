@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { venta } from "./../../store/actions/actions";
@@ -28,16 +28,11 @@ export default function PagoDeCompra() {
   const [fechaEntrega, setFechaEntrega] = useState(date);
   const handleFechaEntrega = (date) => {
     setFechaEntrega(date);
-
   };
-
-  useEffect(() => {
-    document.documentElement.scrollTop = 0;
-  }, []);
 
   const handlePay = async () => {
     alert("Gracias por su compra");
-    const id = await dispatch(venta({total, fechaEntrega}));
+    const id = await dispatch(venta({ total, fechaEntrega }));
     history.push(`/exito/${id}`);
   };
 

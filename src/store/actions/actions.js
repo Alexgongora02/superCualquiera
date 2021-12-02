@@ -67,3 +67,10 @@ export const venta = ({ total, fechaEntrega }) => {
     return id;
   };
 };
+
+export const cancelarVenta = (id) => {
+  return {
+    type: "CANCELAR_VENTA",
+    payload: id,
+  };
+}
