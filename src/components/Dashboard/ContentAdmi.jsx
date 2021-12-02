@@ -1,5 +1,4 @@
 import React from "react";
-import AsideAdmi from "./AsideAdmi";
 
 export default function ContentAdmi() {
   return (
@@ -8,7 +7,7 @@ export default function ContentAdmi() {
         <div className="container-fluid">
           <div className="row mb-2">
             <div className="col-sm-6">
-              <h1 className="m-0">Panel de Control v3</h1>
+              <h1 className="m-0">Panel de Control</h1>
             </div>
             {/* /.col */}
             <div className="col-sm-6">

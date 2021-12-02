@@ -3,10 +3,10 @@ import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import Carrito from "./Carrito";
 import Searchbar from "./Searchbar";
-
-
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Navbar(onSearch) {
+  const { isAuthenticated } = useAuth0();
   const [show, setShow] = useState(false);
   const itemsCarrito = useSelector((state) => state.carrito.length);
 
@@ -63,12 +63,13 @@ export default function Navbar(onSearch) {
               <li className="nav-item">
                 <Searchbar handleShow={handleShow} />
               </li>
-
-              <li className="nav-item" onClick={handleShow}>
-                <Link className="nav-link text-white" to="/Dashboard">
-                Panel de Control
-                </Link>
-              </li>
+              {isAuthenticated && (
+                <li className="nav-item" onClick={handleShow}>
+                  <Link className="nav-link text-white" to="/Dashboard">
+                    Panel de Control
+                  </Link>
+                </li>
+              )}
               <li className="nav-item" onClick={handleShow}>
                 <Link className="nav-link text-white" to="/login">
                   Mi Cuenta
