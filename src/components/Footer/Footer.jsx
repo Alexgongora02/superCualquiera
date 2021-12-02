@@ -66,13 +66,13 @@ export default function Footer() {
             <h4 className="text-ligth fw-bold">Nuestra Tarjeta</h4>
             <ul className="list-unstyled">
               <li className="nav-item">
-                <Link className="nav-link text-white" to="/ Quiero mi tarjeta">
+                <Link className="nav-link text-white" to="/mitarjeta">
                   Quiero mi tarjeta
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-white" to="/Acceso clientes">
-                  Acceso clientes
+                <Link className="nav-link text-white" to="/form">
+                  Trabajá con nosotros
                 </Link>
               </li>
               <li className="nav-item">
@@ -87,28 +87,19 @@ export default function Footer() {
             <h4 className="text-ligth fw-bold"> Preguntas Frecuentes</h4>
             <ul className="list-unstyled">
               <li className="nav-item">
-                <Link
-                  className="nav-link text-white"
-                  to="/Terminos y condiciones"
-                >
+                <Link className="nav-link text-white" to="/terminos">
                   Terminos y condiciones
                 </Link>
               </li>
               <li className="nav-item">
-                <Link
+                <a
                   className="nav-link text-white"
-                  to="/Defensa de los consumidores"
+                  href="https://www.argentina.gob.ar/produccion/defensadelconsumidor"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   Defensa de los consumidores
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className="nav-link text-white"
-                  to="/Contanos tu experiencia"
-                >
-                  Contanos tu experiencia
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

@@ -5,10 +5,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ScrollToTop from "./utils/ScrollToTop";
 import Form from "./components/Form";
 import Home from "./components/Home";
-
 import UploadProducts from "./components/UploadProducts";
 import Login from "./components/Login/Login";
-
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Lista from "./components/Navbar/Lista";
@@ -19,12 +17,15 @@ import Cancelar from "./components/Pedidos/Cancelar";
 import SubNewsletter from "./components/Footer/SubNewsletter";
 import QuieroTarjeta from "./components/auxliares/QuieroTarjeta";
 import Dashboard from "./components/Dashboard/Dashboard";
+import Terminos from "./components/auxliares/Terminos";
 import "./App.css";
 
 function App() {
   return (
+    
     <Router>
       <Provider store={store}>
+        <ScrollToTop>
         <Navbar />
         <div className="container container-main">
           <Switch>
@@ -33,7 +34,6 @@ function App() {
             <Route path="/login" component={Login} />
 
             <Route path="/upload" component={UploadProducts} />
-            <Route path="/categorias" component={Categorias} />
             <Route path="/lista" component={Lista} />
             <Route path="/pago" component={PagoDeCompra} />
             <Route path="/exito/:id" component={Exito} />
@@ -42,9 +42,11 @@ function App() {
             <Route path="/cancelar" component={Cancelar} />
             <Route path="/newsletter" component={SubNewsletter} />
             <Route path="/mitarjeta" component={QuieroTarjeta} />
+            <Route path="/terminos" component={Terminos} />
           </Switch>
         </div>
         <Footer />
+        </ScrollToTop>
       </Provider>
     </Router>
   );

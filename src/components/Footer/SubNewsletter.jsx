@@ -1,7 +1,15 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 //Componet with a form to subscribe to the newsletter
 export default function SubNewsletter() {
+  const history = useHistory();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Gracias por suscribirte");
+    history.push("/");
+  };
+
   return (
     <div className="sub-newsletter p-5">
       <div className="container">
@@ -32,12 +40,13 @@ export default function SubNewsletter() {
               alt="logo"
               width="150"
             />
-            <form action="#" className="my-auto">
+            <form className="my-auto" onSubmit={handleSubmit}>
               <div className="form-group mb-3">
                 <input
                   type="name"
                   className="form-control"
                   placeholder="Nombre"
+                  required
                 />
               </div>
               <div className="form-group mb-3">
@@ -45,6 +54,7 @@ export default function SubNewsletter() {
                   type="email"
                   className="form-control"
                   placeholder="Correo electrónico"
+                  required
                 />
               </div>
               <button className="btn btn-primary">Suscribirse</button>
