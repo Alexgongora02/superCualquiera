@@ -1,8 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router";
 import "./Footer.css";
 
 export default function Footer() {
+  const location = useLocation();
+  const isDashboard = location.pathname === "/Dashboard";
+
+  if (isDashboard) {
+    return null;
+  }
+
   return (
     <footer className="mt-4">
       <div className="top-footer">
@@ -105,7 +113,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="col-sm-4 p-4">
-            <h4 className="text-ligth fw-bold"> SuperCualquiera</h4>
+            <h4 className="text-ligth fw-bold"> SuperEvuca</h4>
             <ul className="list-unstyled">
               <li>Sociedad Anonima Importadora y Exportadora</li>
               <li>Cuit:30-2588888954-15</li>

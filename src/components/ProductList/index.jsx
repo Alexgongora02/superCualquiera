@@ -4,6 +4,9 @@ import { fetchStore } from "./../../store/actions/actions";
 import ProductCard from "./ProductCard";
 import Categorias from "./Categorias";
 
+
+
+
 export default function Index() {
   const [filter, setFilter] = useState(false);
   const dispatch = useDispatch();

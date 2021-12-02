@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Carrito from "./Carrito";
 import Searchbar from "./Searchbar";
+
+
 
 export default function Navbar(onSearch) {
   const [show, setShow] = useState(false);
@@ -16,6 +18,13 @@ export default function Navbar(onSearch) {
   const handleClick = () => {
     setShow(!show);
   };
+
+  const location = useLocation();
+  const isDashboard = location.pathname === "/Dashboard";
+
+  if (isDashboard) {
+    return null;
+  }
   return (
     <>
       <nav className="navbar navbar-expand-md navbar-dark bg-primary fixed-top rounded-bottom">
@@ -29,9 +38,9 @@ export default function Navbar(onSearch) {
             />
             <span
               className="position-absolute bottom-0 start-0 bg-light shadow px-1 text-primary rounded navbar-collapse collapse"
-              style={{ marginLeft: "-25px", fontSize: "1rem" }}
+              style={{ marginLeft: "-9px", fontSize: "1rem" }}
             >
-              SuperCualquiera
+              SuperEvuca
             </span>
           </Link>
           <button
@@ -56,8 +65,13 @@ export default function Navbar(onSearch) {
               </li>
 
               <li className="nav-item" onClick={handleShow}>
+                <Link className="nav-link text-white" to="/Dashboard">
+                Panel de Control
+                </Link>
+              </li>
+              <li className="nav-item" onClick={handleShow}>
                 <Link className="nav-link text-white" to="/login">
-                  Ingresar
+                  Mi Cuenta
                 </Link>
               </li>
               <li className="nav-item">

@@ -26,7 +26,7 @@ export default function Ticket({ pedido }) {
       <div className="ticket">
         <div className="container">
           <div className="ticket-header">
-            <p>SUPERCUALQUIERA S.R.L</p>
+            <p>SUPEREVUCA S.R.L</p>
             <p>CUIT 30707047085</p>
             <p>CABILDO Nº 742</p>
             <p>MARCOS JUAREZ</p>
