@@ -21,32 +21,30 @@ import Terminos from "./components/auxliares/Terminos";
 import "./App.css";
 
 function App() {
-  console.log("index.jsx", window.location.origin);
   return (
-    
     <Router>
       <Provider store={store}>
         <ScrollToTop>
-        <Navbar />
-        <div className="container container-main">
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/form" component={Form} />
-            <Route path="/login" component={Login} />
+          <Navbar />
+          <div className="container container-main">
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/form" component={Form} />
+              <Route path="/login" component={Login} />
 
-            <Route path="/upload" component={UploadProducts} />
-            <Route path="/lista" component={Lista} />
-            <Route path="/pago" component={PagoDeCompra} />
-            <Route path="/exito/:id" component={Exito} />
-            <Route path="/pedidos" component={Pedidos} />
-            <Route path="/dashboard" component={Dashboard} />
-            <Route path="/cancelar" component={Cancelar} />
-            <Route path="/newsletter" component={SubNewsletter} />
-            <Route path="/mitarjeta" component={QuieroTarjeta} />
-            <Route path="/terminos" component={Terminos} />
-          </Switch>
-        </div>
-        <Footer />
+              <Route path="/upload" component={UploadProducts} />
+              <Route path="/lista" component={Lista} />
+              <Route path="/pago" component={PagoDeCompra} />
+              <Route path="/exito/:id" component={Exito} />
+              <Route path="/pedidos" component={Pedidos} />
+              <Route path="/dashboard" component={Dashboard} />
+              <Route path="/cancelar" component={Cancelar} />
+              <Route path="/newsletter" component={SubNewsletter} />
+              <Route path="/mitarjeta" component={QuieroTarjeta} />
+              <Route path="/terminos" component={Terminos} />
+            </Switch>
+          </div>
+          <Footer />
         </ScrollToTop>
       </Provider>
     </Router>
