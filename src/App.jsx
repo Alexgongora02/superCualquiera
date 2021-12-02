@@ -21,6 +21,7 @@ import Terminos from "./components/auxliares/Terminos";
 import "./App.css";
 
 function App() {
+  console.log("index.jsx", window.location.origin);
   return (
     
     <Router>
