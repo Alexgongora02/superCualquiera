@@ -4,7 +4,7 @@ export default function FooterAdm() {
   return (
     <footer className="main-footer">
       <strong>
-        Copyright © 2014-2021 <a href="https://adminlte.io">SuperCualquiera</a>.
+        Copyright © 2014-2021 <a href="https://adminlte.io">SuperEvuca</a>.
       </strong>
       All rights reserved.
       <div className="float-right d-none d-sm-inline-block">

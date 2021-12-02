@@ -11,7 +11,7 @@ export default function AsideAdmi() {
           className="brand-image img-circle elevation-3"
           style={{ opacity: ".8" }}
         />
-        <span className="brand-text font-weight-light">SuperCualquiera</span>
+        <span className="brand-text font-weight-light">SuperEvuca</span>
       </a>
       {/* Sidebar */}
       <div className="sidebar">

@@ -38,9 +38,9 @@ export default function Navbar(onSearch) {
             />
             <span
               className="position-absolute bottom-0 start-0 bg-light shadow px-1 text-primary rounded navbar-collapse collapse"
-              style={{ marginLeft: "-25px", fontSize: "1rem" }}
+              style={{ marginLeft: "-9px", fontSize: "1rem" }}
             >
-              SuperCualquiera
+              SuperEvuca
             </span>
           </Link>
           <button

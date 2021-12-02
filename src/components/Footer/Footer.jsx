@@ -105,7 +105,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="col-sm-4 p-4">
-            <h4 className="text-ligth fw-bold"> SuperCualquiera</h4>
+            <h4 className="text-ligth fw-bold"> SuperEvuca</h4>
             <ul className="list-unstyled">
               <li>Sociedad Anonima Importadora y Exportadora</li>
               <li>Cuit:30-2588888954-15</li>
@@ -114,7 +114,7 @@ export default function Footer() {
           </div>
         </div>
         <p className="col-sm-12 text-center text-white bg-dark">
-          Acepto terminos y condiciones © SuperCualquiera
+          Acepto terminos y condiciones © SuperEvuca
         </p>
       </div>
     </footer>
